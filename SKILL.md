@@ -98,4 +98,7 @@ $$\Delta \text{Skill} \ge 0 \quad (\forall i \in \text{Core Dimensions}: \Delta 
 * **路由引擎详情**：[core/router.md](core/router.md)
 * **帕累托仲裁器**：[core/pareto-arbiter.md](core/pareto-arbiter.md)
 * **红队对抗规程**：[core/red-team.md](core/red-team.md)
+* **自指自举进化协议**：[core/bootstrapping.md](core/bootstrapping.md)
+* **自动化量化评估引擎**：[scripts/oracle_eval.py](scripts/oracle_eval.py)
+* **自动化公理单元测试套件**：[tests/test_oracle_engine.py](tests/test_oracle_engine.py)
 * **商业文案官方黄金通关标杆**：[benchmarks/case-human-article.md](benchmarks/case-human-article.md)（深度拆解人类历史上从 AI 公文腔到 3 分钟顶流宣传片的跨学科推导全过程）

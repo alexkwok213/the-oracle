@@ -96,15 +96,39 @@ the-oracle/
 ├── core/                         # 核心控制中枢
 │   ├── router.md                 # 门控路由引擎协议
 │   ├── pareto-arbiter.md         # 帕累托改进仲裁器
-│   └── red-team.md               # 三维红队对抗攻击协议
-├── experts/                      # 先知公理专家池
+│   ├── red-team.md               # 三维红队对抗攻击协议
+│   └── bootstrapping.md          # 递归自指自举进化协议
+├── experts/                      # 先知公理专家池 (The 7 Grand Domains)
 │   ├── game-theory.md            # 博弈论与昂贵信号专家
 │   ├── information-physics.md    # 物理与信息控制论专家
 │   ├── cognitive-neuro.md        # 认知神经科学专家
 │   ├── economics-pareto.md       # 微观经济学与帕累托专家
-│   └── evolutionary-social.md    # 演化生物学与社会学专家
+│   ├── evolutionary-social.md    # 演化生物学与社会学专家
+│   ├── complex-systems.md        # 复杂系统与控制论专家
+│   └── logical-razors.md         # 哲学逻辑剃刀与芒格心智专家
+├── scripts/                      # 自动化确定性工程工具
+│   └── oracle_eval.py            # 零外部依赖的 Python 帕累托量化评估引擎
+├── tests/                        # 单元测试套件
+│   └── test_oracle_engine.py     # 公理化评估单元测试 (100% 通过)
 └── benchmarks/                   # 黄金通关标杆案例
     └── case-human-article.md     # 商业文案心智重构实战全景
+```
+
+---
+
+## 🛠 自动化量化评估引擎使用指引 (CLI Engine)
+
+The Oracle 自带轻量级、零外部依赖的自动化质检评估脚本，支持单文本评估与优化前后帕累托裁决：
+
+```bash
+# 1. 评估单个文案/技能的信噪比、昂贵信号与合规度
+python3 scripts/oracle_eval.py "待评估的文本或路径"
+
+# 2. 仲裁优化前后的帕累托改进 (是否属于零负优化的绝对跃迁)
+python3 scripts/oracle_eval.py --before draft_before.txt --after draft_after.txt
+
+# 3. 运行公理引擎单元测试套件
+python3 -m unittest tests/test_oracle_engine.py
 ```
 
 ---
