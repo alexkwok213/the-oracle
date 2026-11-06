@@ -29,8 +29,10 @@ flowchart TD
         E1[博弈论与演化专家: 昂贵信号 / 纳什均衡 / 梳毛假说]
         E2[物理与信息论专家: 香农熵减 / 高信噪比 / 复杂度守恒]
         E3[认知与神经科学专家: PKM模型 / 双重编码 / 递质回路]
-        E4[经济学与运筹专家: 帕累托最优 / 边际递减 / 逆向选择]
-        E5[控制论与系统工程专家: 负反馈调节 / 幂等性 / 故障域隔离]
+        E4[经济学与运筹专家: 帕累托最优 / 边际递减 / 护城河]
+        E5[演化生物与生态专家: 梳毛假说 / 红皇后效应 / 生态位隔离]
+        E6[复杂系统与控制论专家: 反馈回路 / 盖尔定律 / 二阶思维]
+        E7[逻辑剃刀与芒格心智专家: 逆向思维 / 洛拉帕卢扎效应 / 四大剃刀]
     end
     
     Router -->|动态加权路由| E1
@@ -38,8 +40,10 @@ flowchart TD
     Router -->|动态加权路由| E3
     Router -->|动态加权路由| E4
     Router -->|动态加权路由| E5
+    Router -->|动态加权路由| E6
+    Router -->|动态加权路由| E7
     
-    E1 & E2 & E3 & E4 & E5 --> Synthesizer[第一性原理熔铸与解法重构]
+    E1 & E2 & E3 & E4 & E5 & E6 & E7 --> Synthesizer[第一性原理熔铸与解法重构]
     
     subgraph 质检与进化引擎
         Synthesizer --> Pareto[帕累托天平: 零负优化与过度修正仲裁]
@@ -68,11 +72,13 @@ flowchart TD
 
 | 专家领域 | 适用场景 | 核心第一性原理 | 支撑模块 |
 |---|---|---|---|
-| **1. 博弈论与演化生态** | 文案宣传、人际沟通、信任建立、商业竞争 | 扎哈维昂贵信号、纳什均衡、重复博弈、敦巴声波梳毛假说 | [experts/game-theory.md](experts/game-theory.md) |
-| **2. 物理学与信息控制论** | 代码重构、接口设计、系统架构、信道传输 | 香农信息熵、高信噪比 (SNR)、复杂度守恒律、幂等性公理 | [experts/information-physics.md](experts/information-physics.md) |
-| **3. 认知与神经生物学** | 用户体验、表达说服、注意力争夺、决策驱动 | 说服知识模型 (PKM)、双重编码理论、三元递质回路 (皮质醇/催产素/多巴胺) | [experts/cognitive-neuro.md](experts/cognitive-neuro.md) |
-| **4. 微观经济学与运筹学** | 商业模式、激励机制、性能权衡、机制设计 | 帕累托改进准则、机会成本、边际效应递减、逆向选择 (柠檬市场) | [experts/economics-pareto.md](experts/economics-pareto.md) |
-| **5. 复杂系统工程** | 容灾高可用、并发处理、组织架构、业务闭环 | 负反馈调节、故障域绝对隔离、局部鲁棒性、自组织临界 | [experts/evolutionary-social.md](experts/evolutionary-social.md) |
+| **1. 博弈论与信息经济学** | 宣传营销、沟通说服、合作裂变、防割韭菜 | 扎哈维昂贵信号、纳什均衡、重复博弈、囚徒困境破解 | [experts/game-theory.md](experts/game-theory.md) |
+| **2. 物理学与信息论** | 代码重构、接口设计、系统信噪比、知识工程 | 香农信息熵、高信噪比 (SNR)、复杂度守恒律、幂等性公理 | [experts/information-physics.md](experts/information-physics.md) |
+| **3. 认知与神经生物学** | 表达人话、用户体验、注意力锁定、决策驱动 | 说服知识模型 (PKM)、双重编码理论、三元递质回路 (皮质醇/催产素/多巴胺) | [experts/cognitive-neuro.md](experts/cognitive-neuro.md) |
+| **4. 微观经济学与运筹学** | 商业模式、激励机制、帕累托改进、护城河 | 帕累托前沿外推、机会成本第一定律、边际成本递减、巴菲特经济护城河 | [experts/economics-pareto.md](experts/economics-pareto.md) |
+| **5. 演化生物学与生态位** | 差异化定位、生态竞争、团队文化、部落共鸣 | 敦巴声波梳毛假说、互惠利他同盟、红皇后效应、高斯生态位隔离 | [experts/evolutionary-social.md](experts/evolutionary-social.md) |
+| **6. 复杂系统与控制论** | 系统架构、组织演进、抗雪崩、长期闭环 | 盖尔定律、正负反馈回路、二阶思维 (And then what?)、约束理论瓶颈律 | [experts/complex-systems.md](experts/complex-systems.md) |
+| **7. 逻辑剃刀与芒格心智** | 盲区排查、重大战略决策、去伪存真、红队攻防 | 芒格逆向思维、洛拉帕卢扎效应、激励超级反应、哲学四大终极剃刀 | [experts/logical-razors.md](experts/logical-razors.md) |
 
 ---
 

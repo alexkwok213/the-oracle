@@ -36,8 +36,10 @@ flowchart TD
         E1[博弈论与演化专家: 昂贵信号 / 纳什均衡 / 梳毛假说]
         E2[物理与信息论专家: 香农熵减 / 高信噪比 / 复杂度守恒]
         E3[认知与神经科学专家: PKM模型 / 双重编码 / 递质回路]
-        E4[经济学与运筹专家: 帕累托最优 / 边际递减 / 逆向选择]
-        E5[控制论与系统工程专家: 负反馈调节 / 幂等性 / 故障域隔离]
+        E4[经济学与运筹专家: 帕累托最优 / 边际递减 / 护城河]
+        E5[演化生物与生态专家: 梳毛假说 / 红皇后效应 / 生态位隔离]
+        E6[复杂系统与控制论专家: 反馈回路 / 盖尔定律 / 二阶思维]
+        E7[逻辑剃刀与芒格心智专家: 逆向思维 / 洛拉帕卢扎效应 / 四大剃刀]
     end
     
     Router -->|动态加权路由| E1
@@ -45,8 +47,10 @@ flowchart TD
     Router -->|动态加权路由| E3
     Router -->|动态加权路由| E4
     Router -->|动态加权路由| E5
+    Router -->|动态加权路由| E6
+    Router -->|动态加权路由| E7
     
-    E1 & E2 & E3 & E4 & E5 --> Synthesizer[第一性原理熔铸与解法重构]
+    E1 & E2 & E3 & E4 & E5 & E6 & E7 --> Synthesizer[第一性原理熔铸与解法重构]
     
     subgraph 质检与进化引擎
         Synthesizer --> Pareto[帕累托天平: 零负优化与过度修正仲裁]
@@ -58,15 +62,19 @@ flowchart TD
 
 ---
 
-## 🧠 先知专家池核心公理 (The Expert Axiom Pool)
+## 🧠 先知专家池核心公理 (The 7 Grand Expert Domains)
+
+本体系汲取**查理·芒格多元思维模型格栅 (Latticework of Mental Models)** 与全网顶级认知科学精髓，构建了 7 大不可动摇的公理专家池：
 
 | 专家模块 | 第一性原理 | 核心公理推导 | 解决的问题 |
 |---|---|---|---|
-| [`experts/game-theory.md`](experts/game-theory.md) | **扎哈维昂贵信号** (Costly Signaling) | 廉价吹牛成本为零，理智受众本能免疫；唯有高成本质押的昂贵信号能建立不可伪造的信任 | 消除自嗨自夸、虚假承诺 |
-| [`experts/information-physics.md`](experts/information-physics.md) | **香农信息论与高信噪比** (Shannon SNR) | 信息的本质是消除不确定性（熵减）；公文大词是高熵噪音，必须降维为具体事实画面 | 消除抽象空洞、废话连篇 |
-| [`experts/cognitive-neuro.md`](experts/cognitive-neuro.md) | **三元递质回路 & PKM** (Neurochemical Triad) | 决策由神经递质主导：皮质醇唤醒警觉 $\rightarrow$ 催产素唤醒同盟归属 $\rightarrow$ 多巴胺唤醒未来奖赏渴望 | 解决心智防御、无法促成行动 |
-| [`experts/economics-pareto.md`](experts/economics-pareto.md) | **帕累托改进与前沿外推** (Pareto Frontier) | 优化必须在不损害任何核心维度的前提下让某维度更好；绝不搞零和妥协，通过升维推高边界 | 防止过度修正、白开水陷阱 |
-| [`experts/evolutionary-social.md`](experts/evolutionary-social.md) | **敦巴声波梳毛假说** (Vocal Grooming) | 语言的演化本质是替代身体梳毛建立同盟；用充满体温的平视对话替代冰冷说教 | 消除公文距离感、建立深层共鸣 |
+| [`experts/game-theory.md`](experts/game-theory.md) | **扎哈维昂贵信号 & 重复博弈** (Costly Signaling) | 廉价吹牛成本为零，理智受众本能免疫；唯有高成本质押的昂贵信号能建立不可伪造的信任；打破囚徒困境 | 消除自嗨自夸、短期割韭菜倾向 |
+| [`experts/information-physics.md`](experts/information-physics.md) | **香农信息论与高信噪比** (Shannon SNR) | 信息的本质是消除不确定性（熵减）；公文大词是高熵噪音，必须降维为具体事实画面；复杂度守恒律 | 消除抽象空洞、废话连篇、认知过载 |
+| [`experts/cognitive-neuro.md`](experts/cognitive-neuro.md) | **三元递质回路 & PKM** (Neurochemical Triad) | 决策由神经递质主导：皮质醇唤醒警觉 $\rightarrow$ 催产素唤醒同盟归属 $\rightarrow$ 多巴胺唤醒未来奖赏渴望；双重编码理论 | 解决心智防御、无法促成行动 |
+| [`experts/economics-pareto.md`](experts/economics-pareto.md) | **帕累托改进与经济护城河** (Pareto & Moats) | 优化必须在不损害任何核心维度的前提下让某维度更好；机会成本第一定律；边际成本递减；无形资产护城河 | 防止过度修正、白开水陷阱 |
+| [`experts/evolutionary-social.md`](experts/evolutionary-social.md) | **敦巴声波梳毛 & 红皇后效应** (Social Brain) | 语言的演化本质是替代身体梳毛建立同盟；红皇后动态适应；高斯排斥原理生态位分化 | 消除公文距离感、同质化内卷竞争 |
+| [`experts/complex-systems.md`](experts/complex-systems.md) | **盖尔定律与二阶思维** (Complex Systems) | 复杂系统必由简单微闭环演化而来；正负反馈回路平衡；临界质量相变；约束理论击穿唯一瓶颈 | 杜绝臃肿设计、短视一阶思维 |
+| [`experts/logical-razors.md`](experts/logical-razors.md) | **芒格逆向思维 & 四大剃刀** (Inversion & Razors) | 倒过来想（先消灭死因）；洛拉帕卢扎多重心理共振；激励超级反应；奥卡姆/汉隆/萨根/希钦斯四大哲学剃刀 | 排查认知盲区、防范虚假宣称 |
 
 ---
 
