@@ -68,7 +68,7 @@ flowchart TD
 
 ---
 
-## 专家池与核心公理索引 (Expert Matrix)
+## 专家池与核心公理索引 (Expert Matrix - 15 Grand Axiomatic Domains)
 
 | 专家领域 | 适用场景 | 核心第一性原理 | 支撑模块 |
 |---|---|---|---|
@@ -82,6 +82,11 @@ flowchart TD
 | **8. 因果革命与贝叶斯理性** | 数据归因、功效验证、反安慰剂、打破怀疑先验 | 珀尔因果梯三层模型、混杂因子隔离、后此谬误防范、贝叶斯先验似然比 | [experts/causality-bayes.md](experts/causality-bayes.md) |
 | **9. 反脆弱性与机制安全** | 制度设计、抗黑天鹅、防投机刷单、团队裂变 | 塔勒布凸性效应 (不对称收益)、肌肤之亲公理 (Skin in the Game)、拜占庭容错 | [experts/antifragility-security.md](experts/antifragility-security.md) |
 | **10. 多模态视听物理模型** | 视频脚本、分镜规划、剪辑节奏、声画对位 | 普多夫金音画对位律、视网膜信息流速率极限 (1.5~4秒)、声学侧链闪避 | [experts/multimodal-physics.md](experts/multimodal-physics.md) |
+| **11. 行为经济与认知启发** | 转化率优化、定价机制、决策阻力破除 | 卡尼曼双系统模型、前景理论损失厌恶 (2.5x)、框架效应、默认选项助推 | [experts/behavioral-heuristics.md](experts/behavioral-heuristics.md) |
+| **12. 计算理论与网络拓扑** | 复杂性剪枝、去中心化裂变、流量中枢定位 | 图灵停机边界、P vs NP 剪枝、无标度网络与幂律分布、CAP 分布式权衡 | [experts/computation-network.md](experts/computation-network.md) |
+| **13. 大战略博弈与OODA环** | 竞争破局、错位竞争、市场突破、破坏性创新 | 约翰·博伊德 OODA 动态环、克劳塞维茨重心法则 (Schwerpunkt)、破坏性创新 | [experts/strategy-ooda.md](experts/strategy-ooda.md) |
+| **14. 热力学与统计物理** | 抗熵增衰亡、组织活力维持、绝境破产防范 | 玻尔兹曼负熵流、普里戈金耗散结构自组织、遍历性破产吸收态守护 | [experts/thermodynamics-statistical.md](experts/thermodynamics-statistical.md) |
+| **15. 语言哲学与符号认知** | 黑话洗净、概念普及、信任穿透、情感通感 | 维特根斯坦语言游戏说、奥斯汀言语行为理论、皮尔斯符号三元组、身体化隐喻 | [experts/semiotics-language.md](experts/semiotics-language.md) |
 
 ---
 

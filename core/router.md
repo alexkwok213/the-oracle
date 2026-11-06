@@ -25,17 +25,21 @@
 
 ---
 
-## 动态路由矩阵对照表 (Routing Decision Matrix)
+## 动态路由矩阵对照表 (Routing Decision Matrix - 15 Grand Domains)
 
 | 任务输入类型 | 主激活专家 (Weight: 0.6) | 辅激活专家 (Weight: 0.4) | 核心注入的公理 |
 |---|---|---|---|
-| **企业宣传 / 招商文案 / 营销脚本** | `game-theory` (昂贵信号) | `cognitive-neuro` (PKM & 递质) | 扎哈维昂贵信号、三元递质回路、反防御性自证、香农信噪比 |
-| **视频视听脚本 / 分镜与剪辑规划** | `multimodal-physics` (音画物理) | `cognitive-neuro` (双重编码) | 普多夫金音画对位律、视觉切率极限、声学侧链闪避 |
-| **系统架构 / 关键算法 / 接口设计** | `information-physics` (香农熵减) | `complex-systems` (控制与演化) | 状态机有限性、幂等性公理、故障域隔离、盖尔定律 |
+| **企业宣传 / 招商文案 / 营销脚本** | `game-theory` (昂贵信号) | `semiotics-language` (符号与言语行为) | 扎哈维昂贵信号、奥斯汀言语行为、皮尔斯指示符号、反防御性自证 |
+| **视频视听脚本 / 分镜与剪辑规划** | `multimodal-physics` (音画物理) | `cognitive-neuro` (双重编码) | 普多夫金音画对位律、视网膜切率极限 (1.5~4s)、声学侧链闪避 |
+| **用户心智决策 / 转化率 / 定价机制** | `behavioral-heuristics` (行为经济) | `cognitive-neuro` (三元递质回路) | 卡尼曼双系统模型、前景理论损失厌恶、框架效应、心理账户 |
+| **系统架构 / 关键算法 / 分布式协同** | `computation-network` (计算与网络) | `information-physics` (香农熵减) | 图灵停机边界、P vs NP 剪枝、CAP 定理、有限状态机幂等性 |
 | **商业模式 / 组织分润 / 激励机制** | `economics-pareto` (帕累托最优) | `antifragility-security` (机制安全) | 帕累托前沿外推、逆向选择防范、激励相容、肌肤之亲公理 |
-| **数据分析 / 效果归因 / 功效验证** | `causality-bayes` (因果与贝叶斯) | `logical-razors` (哲学剃刀) | 珀尔因果梯、混杂因子隔离、贝叶斯先验似然比、萨根标准 |
-| **复杂决策 / 战略规划 / 危机应对** | `complex-systems` (系统动力学) | `logical-razors` (芒格逆向思维) | 二阶思维、增强回路与瓶颈律、洛拉帕卢扎效应、四大剃刀 |
-| **社群运营 / 品牌心智 / 团队领导力** | `evolutionary-social` (社会脑) | `antifragility-security` (反脆弱) | 敦巴声波梳毛假说、互惠利他同盟、拜占庭容错、红皇后动态适应 |
+| **竞争对抗 / 破局打法 / 战略推演** | `strategy-ooda` (大战略博弈) | `complex-systems` (控制与演化) | 博伊德 OODA 环、重心法则 (Schwerpunkt)、奇正相生、破坏性创新 |
+| **组织韧性 / 长期运营 / 跨越周期** | `thermodynamics-statistical` (热力学) | `antifragility-security` (反脆弱) | 玻尔兹曼负熵流、耗散结构自组织、遍历性破产吸收态守护、凸性效应 |
+| **数据分析 / 效果归因 / 功效验证** | `causality-bayes` (因果与贝叶斯) | `logical-razors` (哲学剃刀) | 珀尔因果梯三层模型、混杂因子隔离、贝叶斯先验似然比、萨根标准 |
+| **复杂决策 / 宏观战略 / 盲区排查** | `complex-systems` (系统动力学) | `logical-razors` (芒格逆向思维) | 盖尔定律、二阶思维 (And then what?)、洛拉帕卢扎效应、四大剃刀 |
+| **社群网络 / 裂变增长 / 部落共鸣** | `evolutionary-social` (社会脑) | `computation-network` (无标度网络) | 敦巴声波梳毛假说、互惠利他同盟、无标度网络中心节点、红皇后假说 |
+| **语言表达 / 黑话洗净 / 概念普及** | `semiotics-language` (语言哲学) | `behavioral-heuristics` (启发式) | 维特根斯坦语言游戏说、莱考夫身体化隐喻、系统1直觉穿透 |
 
 ---
 

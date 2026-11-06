@@ -32,7 +32,7 @@
 flowchart TD
     User[用户输入: 任何需要优化的技能 / 复杂任务 / 初稿] --> Router[门控路由器 Router: 核心矛盾特征解构]
     
-    subgraph 底层公理专家池 Expert Axiom Pool (10 Grand Domains)
+    subgraph 底层公理专家池 Expert Axiom Pool (15 Grand Domains)
         E1[博弈论与演化专家: 昂贵信号 / 纳什均衡 / 梳毛假说]
         E2[物理与信息论专家: 香农熵减 / 高信噪比 / 复杂度守恒]
         E3[认知与神经科学专家: PKM模型 / 双重编码 / 递质回路]
@@ -43,11 +43,16 @@ flowchart TD
         E8[因果革命与贝叶斯专家: 珀尔因果梯 / 混杂隔离 / 贝叶斯似然比]
         E9[反脆弱性与机制安全专家: 凸性效应 / 肌肤之亲公理 / 拜占庭容错]
         E10[多模态视听物理专家: 普多夫金音画对位 / 视网膜切率 / 声学侧链]
+        E11[行为经济与认知启发专家: 双系统 / 前景理论损失厌恶 / 心理账户]
+        E12[计算理论与网络科学专家: 图灵停机边界 / P vs NP / 无标度网络]
+        E13[大战略博弈与OODA环专家: OODA循环 / 重心法则 / 破坏性创新]
+        E14[热力学与统计物理专家: 玻尔兹曼负熵流 / 耗散结构 / 遍历性破产防范]
+        E15[语言哲学与符号学专家: 维特根斯坦语言游戏 / 言语行为 / 认知隐喻]
     end
     
-    Router -->|动态加权路由| E1 & E2 & E3 & E4 & E5 & E6 & E7 & E8 & E9 & E10
+    Router -->|动态加权路由| E1 & E2 & E3 & E4 & E5 & E6 & E7 & E8 & E9 & E10 & E11 & E12 & E13 & E14 & E15
     
-    E1 & E2 & E3 & E4 & E5 & E6 & E7 & E8 & E9 & E10 --> Synthesizer[第一性原理熔铸与解法重构]
+    E1 & E2 & E3 & E4 & E5 & E6 & E7 & E8 & E9 & E10 & E11 & E12 & E13 & E14 & E15 --> Synthesizer[第一性原理熔铸与解法重构]
     
     subgraph 质检与自举演化引擎
         Synthesizer --> Pareto[帕累托天平: 零负优化与过度修正仲裁]
@@ -60,9 +65,9 @@ flowchart TD
 
 ---
 
-## 🧠 先知专家池核心公理 (The 10 Grand Expert Domains)
+## 🧠 先知专家池核心公理 (The 15 Grand Expert Domains)
 
-本体系汲取**查理·芒格多元思维模型格栅 (Latticework of Mental Models)** 与全网顶级认知科学精髓，构建了 10 大不可动摇的公理专家池：
+本体系汲取**查理·芒格多元思维模型格栅 (Latticework of Mental Models)** 与全网顶级认知科学精髓，构建了 15 大不可动摇的公理专家池：
 
 | 专家模块 | 第一性原理 | 核心公理推导 | 解决的问题 |
 |---|---|---|---|
@@ -76,6 +81,11 @@ flowchart TD
 | [`experts/causality-bayes.md`](experts/causality-bayes.md) | **珀尔因果革命与贝叶斯理性** (Causality & Bayes) | 珀尔因果梯三层模型（关联-干预-反事实）；混杂因子隔离；后此谬误防范；贝叶斯先验似然比更新 | 数据虚假归因、把巧合当因果 |
 | [`experts/antifragility-security.md`](experts/antifragility-security.md) | **塔勒布反脆弱性与机制安全** (Antifragility & Skin in the Game) | 凸性效应（非对称收益）；肌肤之亲公理（权责对称，自担风险）；拜占庭容错与防投机刷单 | 机制脆弱、搭便车与系统崩溃 |
 | [`experts/multimodal-physics.md`](experts/multimodal-physics.md) | **视听物理学与多模态流媒体** (Multimodal Physics) | 普多夫金音画对位律；视网膜认知切率极限（1.5~4秒）；声学掩蔽与侧链闪避；耳蜗工作记忆气口律 | 视频音画脱节、视觉疲劳、窒息长句 |
+| [`experts/behavioral-heuristics.md`](experts/behavioral-heuristics.md) | **行为经济学与认知启发式** (Behavioral Heuristics) | 卡尼曼双系统模型 (System 1/2)；前景理论非对称损失厌恶 (2.5x)；框架效应与心理账户；默认选项助推 | 忽视人类非理性心理防线、转化率低迷 |
+| [`experts/computation-network.md`](experts/computation-network.md) | **计算理论与网络科学** (Computation & Network) | 图灵停机问题不可判定性；P vs NP 启发式剪枝；无标度网络幂律分布与关键 Hub 节点；CAP 定理 | 算法失控死锁、盲目枚举、流量裂变无重心 |
+| [`experts/strategy-ooda.md`](experts/strategy-ooda.md) | **动态博弈大战略与OODA环** (Grand Strategy & OODA) | 约翰·博伊德 OODA 动态决策环；克劳塞维茨重心法则 (Schwerpunkt)；奇正相生；克里斯坦森破坏性创新 | 错失战机、反应迟钝、多头出击无突破口 |
+| [`experts/thermodynamics-statistical.md`](experts/thermodynamics-statistical.md) | **热力学、统计物理与遍历性** (Thermodynamics & Ergodicity) | 玻尔兹曼负熵流（对抗内卷衰亡）；普里戈金耗散结构自组织；遍历性认识论（严禁踩踏破产吸收态） | 组织僵化死亡、违法踩雷致命吸收态 |
+| [`experts/semiotics-language.md`](experts/semiotics-language.md) | **语言哲学与认知隐喻** (Semiotics & Language) | 维特根斯坦“语言游戏说”（意义即用法）；奥斯汀言语行为理论（以言行事）；皮尔斯指示符号；概念隐喻 | 沉迷大词黑话、假大空自嗨、无法建立通感 |
 
 ---
 
@@ -99,7 +109,7 @@ the-oracle/
 │   ├── pareto-arbiter.md         # 帕累托改进仲裁器
 │   ├── red-team.md               # 三维红队对抗攻击协议
 │   └── bootstrapping.md          # 递归自指自举进化协议
-├── experts/                      # 先知公理专家池 (The 10 Grand Domains)
+├── experts/                      # 先知公理专家池 (The 15 Grand Domains)
 │   ├── game-theory.md            # 博弈论与昂贵信号专家
 │   ├── information-physics.md    # 物理与信息控制论专家
 │   ├── cognitive-neuro.md        # 认知神经科学专家
@@ -109,7 +119,22 @@ the-oracle/
 │   ├── logical-razors.md         # 哲学逻辑剃刀与芒格心智专家
 │   ├── causality-bayes.md        # 珀尔因果革命与贝叶斯专家
 │   ├── antifragility-security.md # 反脆弱与机制安全公理专家
-│   └── multimodal-physics.md     # 多模态视听物理模型专家
+│   ├── multimodal-physics.md     # 多模态视听物理模型专家
+│   ├── behavioral-heuristics.md  # 行为经济学与认知启发式专家
+│   ├── computation-network.md    # 计算理论与网络拓扑学专家
+│   ├── strategy-ooda.md          # 动态博弈大战略与OODA环专家
+│   ├── thermodynamics-statistical.md # 热力学、统计物理与遍历性专家
+│   └── semiotics-language.md     # 语言哲学与认知符号学专家
+├── scripts/                      # 自动化确定性工程工具链 (Zero Dependencies)
+│   ├── oracle_eval.py            # 跨领域公理量化评估与帕累托仲裁器 (Copy/Code/Strategy/Skill)
+│   ├── oracle_mutate.py          # 公理级变异与重构算子执行引擎
+│   ├── oracle_loop.py            # 递归多代自指进化收敛引擎 (TOC 瓶颈诊断 + 不动点收敛)
+│   └── run_oracle_audit.sh       # 5 阶段 CI/CD 自动化回归质检流水线
+├── tests/                        # 单元测试套件
+│   └── test_oracle_engine.py     # 9 大跨学科公理单元测试 (100% 通过)
+└── benchmarks/                   # 黄金通关标杆案例
+    └── case-human-article.md     # 商业文案心智重构实战全景
+```
 ├── scripts/                      # 自动化确定性工程工具链 (Zero Dependencies)
 │   ├── oracle_eval.py            # 跨领域公理量化评估与帕累托仲裁器 (Copy/Code/Strategy/Skill)
 │   ├── oracle_mutate.py          # 公理级变异与重构算子执行引擎
