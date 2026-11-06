@@ -1,0 +1,120 @@
+# The Oracle: 基于第一性原理的公理级 MoE 技能架构与元优化引擎
+
+> **“先知不制造套路，先知洞悉统治宇宙与人类心智的客观公理。”**  
+> **Axiomatic MoE Meta-Skill Engine powered by First Principles, Game Theory, Information Physics & Pareto Optimality.**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](https://opensource.org/licenses/MIT)
+[![Architecture: MoE Engine](https://img.shields.io/badge/Architecture-Axiomatic%20MoE-blue.svg)](SKILL.md)
+[![Status: Production Ready](https://img.shields.io/badge/Status-Production%20Ready-success.svg)](core/router.md)
+
+---
+
+## 🌌 为什么需要 The Oracle？
+
+市面上现有的 Prompt / 技能优化工具，99% 都困在**“表层语法与技巧（Syntax & Tricks）”**中：
+* 加角色设定（You are an expert...）
+* 加思维链（Think step by step...）
+* 加输出格式限制（Output JSON only...）
+
+**当面对复杂的现实商业世界、深层人心博弈与高危系统工程时，这些表面技巧瞬间失效。**
+
+**The Oracle** 彻底颠覆了这种传统做法。它不是一个机械的“流程生成器”（像传统的 skill-creator），而是一个**内置了世界运转底层规律的“先知型 MoE 认知编译器”**：
+1. **透过现象看本质**：通过**门控路由器 (Gating Router)**，瞬间剥离行话，洞悉深层矛盾；
+2. **底层公理专家池**：自动调度物理学、博弈论、神经生物学、演化论、经济学的底层公理；
+3. **帕累托仲裁器**：严禁“拆东墙补西墙”式的负优化，确保任何改进都是无副作用的绝对升维；
+4. **三维红队测试**：经历怀疑者、法务极客与过度修正仲裁官的饱和式攻击，打造免检级系统。
+
+---
+
+## 🏛 架构全景 (System Architecture)
+
+```mermaid
+flowchart TD
+    User[用户输入: 任何需要优化的技能 / 复杂任务 / 初稿] --> Router[门控路由器 Router: 核心矛盾特征解构]
+    
+    subgraph 底层公理专家池 Expert Axiom Pool
+        E1[博弈论与演化专家: 昂贵信号 / 纳什均衡 / 梳毛假说]
+        E2[物理与信息论专家: 香农熵减 / 高信噪比 / 复杂度守恒]
+        E3[认知与神经科学专家: PKM模型 / 双重编码 / 递质回路]
+        E4[经济学与运筹专家: 帕累托最优 / 边际递减 / 逆向选择]
+        E5[控制论与系统工程专家: 负反馈调节 / 幂等性 / 故障域隔离]
+    end
+    
+    Router -->|动态加权路由| E1
+    Router -->|动态加权路由| E2
+    Router -->|动态加权路由| E3
+    Router -->|动态加权路由| E4
+    Router -->|动态加权路由| E5
+    
+    E1 & E2 & E3 & E4 & E5 --> Synthesizer[第一性原理熔铸与解法重构]
+    
+    subgraph 质检与进化引擎
+        Synthesizer --> Pareto[帕累托天平: 零负优化与过度修正仲裁]
+        Pareto --> RedTeam[三维红队对抗审查: 极客挑刺+边界破坏]
+    end
+    
+    RedTeam --> Output[输出: 跨学科第一性原理驱动的免检级技能]
+```
+
+---
+
+## 🧠 先知专家池核心公理 (The Expert Axiom Pool)
+
+| 专家模块 | 第一性原理 | 核心公理推导 | 解决的问题 |
+|---|---|---|---|
+| [`experts/game-theory.md`](experts/game-theory.md) | **扎哈维昂贵信号** (Costly Signaling) | 廉价吹牛成本为零，理智受众本能免疫；唯有高成本质押的昂贵信号能建立不可伪造的信任 | 消除自嗨自夸、虚假承诺 |
+| [`experts/information-physics.md`](experts/information-physics.md) | **香农信息论与高信噪比** (Shannon SNR) | 信息的本质是消除不确定性（熵减）；公文大词是高熵噪音，必须降维为具体事实画面 | 消除抽象空洞、废话连篇 |
+| [`experts/cognitive-neuro.md`](experts/cognitive-neuro.md) | **三元递质回路 & PKM** (Neurochemical Triad) | 决策由神经递质主导：皮质醇唤醒警觉 $\rightarrow$ 催产素唤醒同盟归属 $\rightarrow$ 多巴胺唤醒未来奖赏渴望 | 解决心智防御、无法促成行动 |
+| [`experts/economics-pareto.md`](experts/economics-pareto.md) | **帕累托改进与前沿外推** (Pareto Frontier) | 优化必须在不损害任何核心维度的前提下让某维度更好；绝不搞零和妥协，通过升维推高边界 | 防止过度修正、白开水陷阱 |
+| [`experts/evolutionary-social.md`](experts/evolutionary-social.md) | **敦巴声波梳毛假说** (Vocal Grooming) | 语言的演化本质是替代身体梳毛建立同盟；用充满体温的平视对话替代冰冷说教 | 消除公文距离感、建立深层共鸣 |
+
+---
+
+## ⚖️ 帕累托改进仲裁铁律
+
+$$\Delta \text{Skill} \ge 0 \quad (\forall i \in \text{Core Dimensions}: \Delta D_i \ge 0 \quad \land \quad \exists j: \Delta D_j > 0)$$
+
+1. **绝对禁令**：严禁“为了合规牺牲气场”、“为了接地气降级为地摊小作坊”；
+2. **升维跃迁**：遭遇两难对立时，严禁折中妥协，必须引入高维锚点（如百强药企沉淀、国家特医批文）直接推升帕累托最优边界！
+
+---
+
+## 📁 项目目录索引
+
+```
+the-oracle/
+├── SKILL.md                      # 核心元技能定义规范（Agent 原生支持）
+├── README.md                     # 项目哲学全景与架构说明
+├── core/                         # 核心控制中枢
+│   ├── router.md                 # 门控路由引擎协议
+│   ├── pareto-arbiter.md         # 帕累托改进仲裁器
+│   └── red-team.md               # 三维红队对抗攻击协议
+├── experts/                      # 先知公理专家池
+│   ├── game-theory.md            # 博弈论与昂贵信号专家
+│   ├── information-physics.md    # 物理与信息控制论专家
+│   ├── cognitive-neuro.md        # 认知神经科学专家
+│   ├── economics-pareto.md       # 微观经济学与帕累托专家
+│   └── evolutionary-social.md    # 演化生物学与社会学专家
+└── benchmarks/                   # 黄金通关标杆案例
+    └── case-human-article.md     # 商业文案心智重构实战全景
+```
+
+---
+
+## 🚀 如何安装与调用
+
+### 作为 Agent 技能集成
+直接将本目录软链接到你的 Agent 技能目录（支持 Antigravity / Claude Code / Codex）：
+```bash
+ln -s /path/to/the-oracle ~/.gemini/antigravity/skills/the-oracle
+```
+
+### 调用模式
+当面对复杂任务或需要优化已有技能时，直接指示 Agent：
+> *“请调用 The Oracle 引擎，识别当前任务的核心矛盾，激活对应的底层公理专家，执行帕累托改进与红队对抗测试。”*
+
+---
+
+## 📄 License
+
+MIT License - 传承第一性原理，让人工智能触碰世界底层的确定性。
