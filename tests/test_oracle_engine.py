@@ -141,5 +141,39 @@ class TestOracleAxiomaticEngine(unittest.TestCase):
         arb = arbitrate_pareto(ev_bad, ev_good)
         self.assertTrue(arb["is_pareto_improvement"])
 
+    def test_skill_domain_axioms(self):
+        """测试元技能与系统提示词架构公理"""
+        vague_skill = "--- \nname: bad-prompt\n---\n希望你尽量尝试帮用户写代码，你看着办吧，随便写写就行。"
+        rigorous_skill = """---
+name: the-oracle
+---
+# 技能规范与运行时执行协议
+## 阶段一：公理门控路由
+必须严格执行第一性原理推导，识别香农信噪比与博弈论纳什均衡。
+## 阶段二：边界控制与红队防线
+严格禁止主观臆断与虚假兜底承诺。遇到异常必须执行降级与回滚协议。
+## 阶段三：验证协议与帕累托验收
+执行自动化测试套件断言校验，运行帕累托仲裁器，严格禁止负向退化。输出量化评分表。
+"""
+        ev_vague = evaluate_universal(vague_skill, domain="skill")
+        ev_rigorous = evaluate_universal(rigorous_skill, domain="skill")
+        
+        self.assertLess(ev_vague["composite_score"], 60)
+        self.assertGreaterEqual(ev_rigorous["composite_score"], 80)
+        
+        arb = arbitrate_pareto(ev_vague, ev_rigorous)
+        self.assertTrue(arb["is_pareto_improvement"])
+
+    def test_recursive_evolution_convergence(self):
+        """测试多代递归自演化与不动点收敛"""
+        from oracle_loop import RecursiveOracleEngine
+        dirty_input = "我们的初心很纯粹，货源你不用操心，我们全程兜底！稳赚不赔！希望你尽量尝试一下。"
+        engine = RecursiveOracleEngine(domain="copy", max_iterations=5, epsilon=0.5)
+        res = engine.run_recursive_evolution(dirty_input)
+        
+        self.assertTrue(res["converged"])
+        self.assertGreater(res["total_gain"], 15.0)
+        self.assertGreaterEqual(len(res["trajectory"]), 2)
+
 if __name__ == '__main__':
     unittest.main()

@@ -257,13 +257,90 @@ class StrategyEvaluator:
         }
 
 # ==========================================
-# 4. 全局自动域检测与统一仲裁器
+# 4. 元技能与提示词认知架构领域公理 (Skill / Meta Domain)
+# ==========================================
+SKILL_DIRECTIVE_PATTERNS = [
+    r"MUST", r"NEVER", r"严格禁止", r"必须", r"核心流程", r"触发条件",
+    r"阶段\s*[一二三四五12345]", r"步骤\s*[12345]", r"工作流", r"执行协议"
+]
+SKILL_VAGUE_PATTERNS = [
+    r"尽可能", r"尽量", r"尽力", r"希望你", r"请尝试", r"你看着办",
+    r"自由发挥", r"随便", r"大概", r"也许", r"可能"
+]
+SKILL_BOUNDARY_PATTERNS = [
+    r"红线", r"禁令", r"边界条件", r"防御性", r"异常处理", r"降级",
+    r"回滚", r"负向提示", r"防范.*幻觉", r"红队", r"攻击测试", r"安全防护"
+]
+SKILL_VERIFICATION_PATTERNS = [
+    r"验收标准", r"质检", r"帕累托", r"单元测试", r"断言", r"评分表",
+    r"checklist", r"量化", r"回归测试", r"仲裁", r"验证协议"
+]
+SKILL_AXIOMATIC_PATTERNS = [
+    r"第一性原理", r"香农", r"熵", r"博弈", r"纳什", r"扎哈维", r"昂贵信号",
+    r"盖尔定律", r"约束理论", r"二阶思维", r"奥卡姆剃刀", r"珀尔因果", r"反脆弱"
+]
+
+class SkillEvaluator:
+    def __init__(self, text: str):
+        self.text = text.strip()
+
+    def evaluate(self) -> Dict[str, Any]:
+        """基于认知控制论与软件工程公理评估 Agent 技能架构质量"""
+        directives = [m for p in SKILL_DIRECTIVE_PATTERNS for m in re.findall(p, self.text)]
+        vagues = [m for p in SKILL_VAGUE_PATTERNS for m in re.findall(p, self.text)]
+        boundaries = [m for p in SKILL_BOUNDARY_PATTERNS for m in re.findall(p, self.text)]
+        verifications = [m for p in SKILL_VERIFICATION_PATTERNS for m in re.findall(p, self.text)]
+        axioms = [m for p in SKILL_AXIOMATIC_PATTERNS for m in re.findall(p, self.text)]
+
+        # 1. 明确性与指令密度 (Directive Density & SNR)
+        directive_score = min(100, max(20, 50 + len(directives)*5 - len(vagues)*15))
+
+        # 2. 边界控制与抗扰防御 (Boundary Safety & Red-Teaming)
+        boundary_score = min(100, max(20, 40 + len(boundaries)*10))
+
+        # 3. 验收标准与验证严格度 (Verification Rigor)
+        verif_score = min(100, max(20, 30 + len(verifications)*10))
+
+        # 4. 底层公理深度与理论支撑 (Axiomatic Grounding)
+        axiom_score = min(100, max(20, 30 + len(axioms)*10))
+
+        v = {
+            "directive_density": directive_score,
+            "boundary_safety": boundary_score,
+            "verification_rigor": verif_score,
+            "axiomatic_grounding": axiom_score
+        }
+        composite = round(v["directive_density"]*0.25 + v["boundary_safety"]*0.25 + v["verification_rigor"]*0.25 + v["axiomatic_grounding"]*0.25, 1)
+
+        return {
+            "domain": "skill",
+            "composite_score": composite,
+            "pareto_vector": v,
+            "details": {
+                "directives_count": len(directives),
+                "vague_phrases": list(set(vagues)),
+                "boundary_rules_count": len(boundaries),
+                "verification_checks_count": len(verifications),
+                "axiom_citations": list(set(axioms))
+            }
+        }
+
+# ==========================================
+# 5. 全局自动域检测与统一仲裁器
 # ==========================================
 def detect_domain(text: str) -> str:
-    """自动判断输入是代码、文案还是商业战略"""
+    """自动判断输入是代码、文案、技能架构还是商业战略"""
     code_indicators = [r'def\s+\w+\(', r'class\s+\w+[:\(]', r'import\s+\w+', r'function\s*\(', r'const\s+\w+\s*=']
     if any(re.search(p, text) for p in code_indicators):
         return "code"
+    
+    skill_indicators = [
+        r'---\s*\nname:\s*', r'# 技能规范', r'# Agent Skill', r'元技能', r'公理级.*技能',
+        r'## 运行时认知协议', r'## 核心工作流', r'触发条件', r'SKILL\.md'
+    ]
+    if any(re.search(p, text) for p in skill_indicators):
+        return "skill"
+
     strategy_indicators = [r'商业模式', r'机制设计', r'分润', r'代币经济', r'飞轮', r'生态位', r'纳什均衡']
     if len([p for p in strategy_indicators if re.search(p, text)]) >= 2:
         return "strategy"
@@ -299,6 +376,8 @@ def evaluate_universal(text: str, domain: str = "auto", name: str = "Candidate")
         
     if domain == "code":
         res = CodeEvaluator(text).evaluate()
+    elif domain == "skill":
+        res = SkillEvaluator(text).evaluate()
     elif domain == "strategy":
         res = StrategyEvaluator(text).evaluate()
     else:
@@ -339,12 +418,21 @@ def print_universal_report(res: Dict[str, Any]):
         print(f"✓ 识别出的核心护城河: {d.get('identified_moats')}")
         print(f"✓ 激励相容机制设计: {d.get('incentive_mechanisms')}")
         print(f"✓ 公地悲剧/系统性风险: {d.get('identified_systemic_risks')}")
+    elif res["domain"] == "skill":
+        print(f"✓ 指令密度与行动项: {d.get('directives_count')} 处")
+        if d.get("vague_phrases"):
+            print(f"⚠️ 发现含糊指令词 (Vague Expressions): {d['vague_phrases']}")
+        else:
+            print("✓ 零含糊指令，强确定性动作驱动 (Zero Vague Directives)")
+        print(f"✓ 边界安全与防范规则: {d.get('boundary_rules_count')} 条")
+        print(f"✓ 验证协议与质检断言: {d.get('verification_checks_count')} 项")
+        print(f"✓ 底层公理思维模型引用: {d.get('axiom_citations')}")
     print(f"=======================================================\n")
 
 def main():
     parser = argparse.ArgumentParser(description="The Oracle Universal Axiomatic Evaluator")
     parser.add_argument("input_text", nargs="?", help="待评估文本或文件路径")
-    parser.add_argument("--domain", choices=["auto", "copy", "code", "strategy"], default="auto", help="评估领域")
+    parser.add_argument("--domain", choices=["auto", "copy", "code", "strategy", "skill"], default="auto", help="评估领域")
     parser.add_argument("--before", help="优化前文本或文件路径")
     parser.add_argument("--after", help="优化后文本或文件路径")
     parser.add_argument("--json", action="store_true", help="输出结构化 JSON 数据")

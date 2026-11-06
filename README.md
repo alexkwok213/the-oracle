@@ -32,7 +32,7 @@
 flowchart TD
     User[用户输入: 任何需要优化的技能 / 复杂任务 / 初稿] --> Router[门控路由器 Router: 核心矛盾特征解构]
     
-    subgraph 底层公理专家池 Expert Axiom Pool
+    subgraph 底层公理专家池 Expert Axiom Pool (10 Grand Domains)
         E1[博弈论与演化专家: 昂贵信号 / 纳什均衡 / 梳毛假说]
         E2[物理与信息论专家: 香农熵减 / 高信噪比 / 复杂度守恒]
         E3[认知与神经科学专家: PKM模型 / 双重编码 / 递质回路]
@@ -40,31 +40,29 @@ flowchart TD
         E5[演化生物与生态专家: 梳毛假说 / 红皇后效应 / 生态位隔离]
         E6[复杂系统与控制论专家: 反馈回路 / 盖尔定律 / 二阶思维]
         E7[逻辑剃刀与芒格心智专家: 逆向思维 / 洛拉帕卢扎效应 / 四大剃刀]
+        E8[因果革命与贝叶斯专家: 珀尔因果梯 / 混杂隔离 / 贝叶斯似然比]
+        E9[反脆弱性与机制安全专家: 凸性效应 / 肌肤之亲公理 / 拜占庭容错]
+        E10[多模态视听物理专家: 普多夫金音画对位 / 视网膜切率 / 声学侧链]
     end
     
-    Router -->|动态加权路由| E1
-    Router -->|动态加权路由| E2
-    Router -->|动态加权路由| E3
-    Router -->|动态加权路由| E4
-    Router -->|动态加权路由| E5
-    Router -->|动态加权路由| E6
-    Router -->|动态加权路由| E7
+    Router -->|动态加权路由| E1 & E2 & E3 & E4 & E5 & E6 & E7 & E8 & E9 & E10
     
-    E1 & E2 & E3 & E4 & E5 & E6 & E7 --> Synthesizer[第一性原理熔铸与解法重构]
+    E1 & E2 & E3 & E4 & E5 & E6 & E7 & E8 & E9 & E10 --> Synthesizer[第一性原理熔铸与解法重构]
     
-    subgraph 质检与进化引擎
+    subgraph 质检与自举演化引擎
         Synthesizer --> Pareto[帕累托天平: 零负优化与过度修正仲裁]
         Pareto --> RedTeam[三维红队对抗审查: 极客挑刺+边界破坏]
+        RedTeam --> Bootstrapping[递归自指演化引擎: 多代变异迭代至不动点]
     end
     
-    RedTeam --> Output[输出: 跨学科第一性原理驱动的免检级技能]
+    Bootstrapping --> Output[输出: 跨学科第一性原理驱动的免检级终极技能]
 ```
 
 ---
 
-## 🧠 先知专家池核心公理 (The 7 Grand Expert Domains)
+## 🧠 先知专家池核心公理 (The 10 Grand Expert Domains)
 
-本体系汲取**查理·芒格多元思维模型格栅 (Latticework of Mental Models)** 与全网顶级认知科学精髓，构建了 7 大不可动摇的公理专家池：
+本体系汲取**查理·芒格多元思维模型格栅 (Latticework of Mental Models)** 与全网顶级认知科学精髓，构建了 10 大不可动摇的公理专家池：
 
 | 专家模块 | 第一性原理 | 核心公理推导 | 解决的问题 |
 |---|---|---|---|
@@ -75,6 +73,9 @@ flowchart TD
 | [`experts/evolutionary-social.md`](experts/evolutionary-social.md) | **敦巴声波梳毛 & 红皇后效应** (Social Brain) | 语言的演化本质是替代身体梳毛建立同盟；红皇后动态适应；高斯排斥原理生态位分化 | 消除公文距离感、同质化内卷竞争 |
 | [`experts/complex-systems.md`](experts/complex-systems.md) | **盖尔定律与二阶思维** (Complex Systems) | 复杂系统必由简单微闭环演化而来；正负反馈回路平衡；临界质量相变；约束理论击穿唯一瓶颈 | 杜绝臃肿设计、短视一阶思维 |
 | [`experts/logical-razors.md`](experts/logical-razors.md) | **芒格逆向思维 & 四大剃刀** (Inversion & Razors) | 倒过来想（先消灭死因）；洛拉帕卢扎多重心理共振；激励超级反应；奥卡姆/汉隆/萨根/希钦斯四大哲学剃刀 | 排查认知盲区、防范虚假宣称 |
+| [`experts/causality-bayes.md`](experts/causality-bayes.md) | **珀尔因果革命与贝叶斯理性** (Causality & Bayes) | 珀尔因果梯三层模型（关联-干预-反事实）；混杂因子隔离；后此谬误防范；贝叶斯先验似然比更新 | 数据虚假归因、把巧合当因果 |
+| [`experts/antifragility-security.md`](experts/antifragility-security.md) | **塔勒布反脆弱性与机制安全** (Antifragility & Skin in the Game) | 凸性效应（非对称收益）；肌肤之亲公理（权责对称，自担风险）；拜占庭容错与防投机刷单 | 机制脆弱、搭便车与系统崩溃 |
+| [`experts/multimodal-physics.md`](experts/multimodal-physics.md) | **视听物理学与多模态流媒体** (Multimodal Physics) | 普多夫金音画对位律；视网膜认知切率极限（1.5~4秒）；声学掩蔽与侧链闪避；耳蜗工作记忆气口律 | 视频音画脱节、视觉疲劳、窒息长句 |
 
 ---
 
@@ -98,37 +99,49 @@ the-oracle/
 │   ├── pareto-arbiter.md         # 帕累托改进仲裁器
 │   ├── red-team.md               # 三维红队对抗攻击协议
 │   └── bootstrapping.md          # 递归自指自举进化协议
-├── experts/                      # 先知公理专家池 (The 7 Grand Domains)
+├── experts/                      # 先知公理专家池 (The 10 Grand Domains)
 │   ├── game-theory.md            # 博弈论与昂贵信号专家
 │   ├── information-physics.md    # 物理与信息控制论专家
 │   ├── cognitive-neuro.md        # 认知神经科学专家
 │   ├── economics-pareto.md       # 微观经济学与帕累托专家
 │   ├── evolutionary-social.md    # 演化生物学与社会学专家
 │   ├── complex-systems.md        # 复杂系统与控制论专家
-│   └── logical-razors.md         # 哲学逻辑剃刀与芒格心智专家
-├── scripts/                      # 自动化确定性工程工具
-│   └── oracle_eval.py            # 零外部依赖的 Python 帕累托量化评估引擎
+│   ├── logical-razors.md         # 哲学逻辑剃刀与芒格心智专家
+│   ├── causality-bayes.md        # 珀尔因果革命与贝叶斯专家
+│   ├── antifragility-security.md # 反脆弱与机制安全公理专家
+│   └── multimodal-physics.md     # 多模态视听物理模型专家
+├── scripts/                      # 自动化确定性工程工具链 (Zero Dependencies)
+│   ├── oracle_eval.py            # 跨领域公理量化评估与帕累托仲裁器 (Copy/Code/Strategy/Skill)
+│   ├── oracle_mutate.py          # 公理级变异与重构算子执行引擎
+│   ├── oracle_loop.py            # 递归多代自指进化收敛引擎 (TOC 瓶颈诊断 + 不动点收敛)
+│   └── run_oracle_audit.sh       # 5 阶段 CI/CD 自动化回归质检流水线
 ├── tests/                        # 单元测试套件
-│   └── test_oracle_engine.py     # 公理化评估单元测试 (100% 通过)
+│   └── test_oracle_engine.py     # 9 大跨学科公理单元测试 (100% 通过)
 └── benchmarks/                   # 黄金通关标杆案例
     └── case-human-article.md     # 商业文案心智重构实战全景
 ```
 
 ---
 
-## 🛠 自动化量化评估引擎使用指引 (CLI Engine)
+## 🛠 自动化量化工程工具链使用指引 (CLI Toolkit)
 
-The Oracle 自带轻量级、零外部依赖的自动化质检评估脚本，支持单文本评估与优化前后帕累托裁决：
+The Oracle 自带轻量级、零外部依赖的自动化工程套件，支持单文本评估、优化前后帕累托裁决、公理变异重构与递归自指进化：
 
 ```bash
-# 1. 评估单个文案/技能的信噪比、昂贵信号与合规度
-python3 scripts/oracle_eval.py "待评估的文本或路径"
+# 1. 跨领域公理评估 (支持 copy / code / strategy / skill 四大领域)
+python3 scripts/oracle_eval.py "待评估文本或文件路径"
 
 # 2. 仲裁优化前后的帕累托改进 (是否属于零负优化的绝对跃迁)
 python3 scripts/oracle_eval.py --before draft_before.txt --after draft_after.txt
 
-# 3. 运行公理引擎单元测试套件
-python3 -m unittest tests/test_oracle_engine.py
+# 3. 执行公理级变异重构 (熵减、合规降维、指令结构化)
+python3 scripts/oracle_mutate.py dirty_input.txt -o clean_output.txt
+
+# 4. 运行递归多代自指进化循环 (迭代直至帕累托不动点收敛)
+python3 scripts/oracle_loop.py target.txt --max-iter 5 -o evolved.txt
+
+# 5. 执行 5 阶段完整自动化回归与质检流水线
+./scripts/run_oracle_audit.sh
 ```
 
 ---

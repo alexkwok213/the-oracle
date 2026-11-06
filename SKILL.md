@@ -79,6 +79,9 @@ flowchart TD
 | **5. 演化生物学与生态位** | 差异化定位、生态竞争、团队文化、部落共鸣 | 敦巴声波梳毛假说、互惠利他同盟、红皇后效应、高斯生态位隔离 | [experts/evolutionary-social.md](experts/evolutionary-social.md) |
 | **6. 复杂系统与控制论** | 系统架构、组织演进、抗雪崩、长期闭环 | 盖尔定律、正负反馈回路、二阶思维 (And then what?)、约束理论瓶颈律 | [experts/complex-systems.md](experts/complex-systems.md) |
 | **7. 逻辑剃刀与芒格心智** | 盲区排查、重大战略决策、去伪存真、红队攻防 | 芒格逆向思维、洛拉帕卢扎效应、激励超级反应、哲学四大终极剃刀 | [experts/logical-razors.md](experts/logical-razors.md) |
+| **8. 因果革命与贝叶斯理性** | 数据归因、功效验证、反安慰剂、打破怀疑先验 | 珀尔因果梯三层模型、混杂因子隔离、后此谬误防范、贝叶斯先验似然比 | [experts/causality-bayes.md](experts/causality-bayes.md) |
+| **9. 反脆弱性与机制安全** | 制度设计、抗黑天鹅、防投机刷单、团队裂变 | 塔勒布凸性效应 (不对称收益)、肌肤之亲公理 (Skin in the Game)、拜占庭容错 | [experts/antifragility-security.md](experts/antifragility-security.md) |
+| **10. 多模态视听物理模型** | 视频脚本、分镜规划、剪辑节奏、声画对位 | 普多夫金音画对位律、视网膜信息流速率极限 (1.5~4秒)、声学侧链闪避 | [experts/multimodal-physics.md](experts/multimodal-physics.md) |
 
 ---
 
@@ -100,5 +103,8 @@ $$\Delta \text{Skill} \ge 0 \quad (\forall i \in \text{Core Dimensions}: \Delta 
 * **红队对抗规程**：[core/red-team.md](core/red-team.md)
 * **自指自举进化协议**：[core/bootstrapping.md](core/bootstrapping.md)
 * **自动化量化评估引擎**：[scripts/oracle_eval.py](scripts/oracle_eval.py)
+* **公理变异与重构引擎**：[scripts/oracle_mutate.py](scripts/oracle_mutate.py)
+* **递归多代自指进化引擎**：[scripts/oracle_loop.py](scripts/oracle_loop.py)
+* **CI/CD 全自动化回归质检**：[scripts/run_oracle_audit.sh](scripts/run_oracle_audit.sh)
 * **自动化公理单元测试套件**：[tests/test_oracle_engine.py](tests/test_oracle_engine.py)
 * **商业文案官方黄金通关标杆**：[benchmarks/case-human-article.md](benchmarks/case-human-article.md)（深度拆解人类历史上从 AI 公文腔到 3 分钟顶流宣传片的跨学科推导全过程）
