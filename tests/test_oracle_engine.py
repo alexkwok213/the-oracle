@@ -16,7 +16,7 @@ import sys
 
 # 将 scripts 目录加入 sys.path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'scripts')))
-from oracle_eval import OracleEvaluator, arbitrate_pareto
+from oracle_eval import evaluate_universal, arbitrate_pareto, CopyEvaluator, OracleEvaluator
 
 class TestOracleAxiomaticEngine(unittest.TestCase):
 
@@ -90,6 +90,56 @@ class TestOracleAxiomaticEngine(unittest.TestCase):
         res_regressed = arbitrate_pareto(before, after_regressed)
         self.assertFalse(res_regressed["is_pareto_improvement"])
         self.assertIn("acoustic_flow", res_regressed["regressed_dimensions"])
+
+    def test_code_domain_axioms(self):
+        """测试代码领域的控制论与复杂度守恒第一性原理"""
+        dirty_code = """
+        def process_data(data):
+            global total_count
+            try:
+                for a in data:
+                    for b in a:
+                        for c in b:
+                            for d in c:
+                                do_something(d)
+            except:
+                pass
+            except Exception:
+                pass
+        """
+        clean_code = """
+        def process_data(data: list) -> list:
+            results = []
+            for item in flatten(data):
+                try:
+                    results.append(transform(item))
+                except ValueError as e:
+                    logger.warning("Invalid item: %s", e)
+            return results
+        """
+        ev_dirty = evaluate_universal(dirty_code, domain="code")
+        ev_clean = evaluate_universal(clean_code, domain="code")
+        
+        self.assertLessEqual(ev_dirty["pareto_vector"]["fault_isolation"], 60)
+        self.assertEqual(ev_clean["pareto_vector"]["fault_isolation"], 100)
+        
+        arb = arbitrate_pareto(ev_dirty, ev_clean)
+        self.assertTrue(arb["is_pareto_improvement"])
+        self.assertGreater(arb["composite_delta"], 0)
+
+    def test_strategy_domain_axioms(self):
+        """测试商业战略领域的帕累托与护城河第一性原理"""
+        zero_sum_strategy = "我们要在存量市场中彻底干掉对手，搞零和博弈，过度透支熟人信任，引发公地悲剧，劣币驱逐良币！"
+        moat_strategy = "我们依托高门槛无形资产、专利壁垒与网络效应，构建双赢机制与激励相容分润规则，享受30%增量分成与边际成本递减，实现帕累托最优。"
+        
+        ev_bad = evaluate_universal(zero_sum_strategy, domain="strategy")
+        ev_good = evaluate_universal(moat_strategy, domain="strategy")
+        
+        self.assertLess(ev_bad["composite_score"], 60)
+        self.assertGreaterEqual(ev_good["composite_score"], 80)
+        
+        arb = arbitrate_pareto(ev_bad, ev_good)
+        self.assertTrue(arb["is_pareto_improvement"])
 
 if __name__ == '__main__':
     unittest.main()
