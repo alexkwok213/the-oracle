@@ -25,10 +25,12 @@
 
 ---
 
-## 动态路由矩阵对照表 (Routing Decision Matrix - 15 Grand Domains)
+## 动态路由矩阵对照表 (Routing Decision Matrix - 17 Grand Domains)
 
 | 任务输入类型 | 主激活专家 (Weight: 0.6) | 辅激活专家 (Weight: 0.4) | 核心注入的公理 |
 |---|---|---|---|
+| **破框思考 (Think Out of the Box) / 颠覆创新** | `lateral-breakthrough` (横向思维) | `complex-systems` (二阶改变) | 九点隐性假设粉碎、瓦茨拉维克二阶改变、TRIZ四大矛盾分离、PO挑衅算子、正交升维 |
+| **元认知排查 / 认知偏差 / 避免做蠢事** | `epistemic-latticework` (认知格栅) | `logical-razors` (逻辑剃刀) | 地图不是疆域、查理·芒格25种误判心理学、能力圈边界、局部最优模拟退火跳跃 |
 | **企业宣传 / 招商文案 / 营销脚本** | `game-theory` (昂贵信号) | `semiotics-language` (符号与言语行为) | 扎哈维昂贵信号、奥斯汀言语行为、皮尔斯指示符号、反防御性自证 |
 | **视频视听脚本 / 分镜与剪辑规划** | `multimodal-physics` (音画物理) | `cognitive-neuro` (双重编码) | 普多夫金音画对位律、视网膜切率极限 (1.5~4s)、声学侧链闪避 |
 | **用户心智决策 / 转化率 / 定价机制** | `behavioral-heuristics` (行为经济) | `cognitive-neuro` (三元递质回路) | 卡尼曼双系统模型、前景理论损失厌恶、框架效应、心理账户 |

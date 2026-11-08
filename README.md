@@ -32,7 +32,7 @@
 flowchart TD
     User[用户输入: 任何需要优化的技能 / 复杂任务 / 初稿] --> Router[门控路由器 Router: 核心矛盾特征解构]
     
-    subgraph 底层公理专家池 Expert Axiom Pool (15 Grand Domains)
+    subgraph 底层公理专家池 Expert Axiom Pool (17 Grand Domains)
         E1[博弈论与演化专家: 昂贵信号 / 纳什均衡 / 梳毛假说]
         E2[物理与信息论专家: 香农熵减 / 高信噪比 / 复杂度守恒]
         E3[认知与神经科学专家: PKM模型 / 双重编码 / 递质回路]
@@ -48,11 +48,13 @@ flowchart TD
         E13[大战略博弈与OODA环专家: OODA循环 / 重心法则 / 破坏性创新]
         E14[热力学与统计物理专家: 玻尔兹曼负熵流 / 耗散结构 / 遍历性破产防范]
         E15[语言哲学与符号学专家: 维特根斯坦语言游戏 / 言语行为 / 认知隐喻]
+        E16[破框思维与TRIZ矛盾分离专家: 九点隐性假设 / 二阶改变 / 矛盾分离 / 正交升维]
+        E17[认知格栅与人类误判学专家: 地图不是疆域 / 芒格25种偏见 / 模拟退火跳跃]
     end
     
-    Router -->|动态加权路由| E1 & E2 & E3 & E4 & E5 & E6 & E7 & E8 & E9 & E10 & E11 & E12 & E13 & E14 & E15
+    Router -->|动态加权路由| E1 & E2 & E3 & E4 & E5 & E6 & E7 & E8 & E9 & E10 & E11 & E12 & E13 & E14 & E15 & E16 & E17
     
-    E1 & E2 & E3 & E4 & E5 & E6 & E7 & E8 & E9 & E10 & E11 & E12 & E13 & E14 & E15 --> Synthesizer[第一性原理熔铸与解法重构]
+    E1 & E2 & E3 & E4 & E5 & E6 & E7 & E8 & E9 & E10 & E11 & E12 & E13 & E14 & E15 & E16 & E17 --> Synthesizer[第一性原理熔铸与解法重构]
     
     subgraph 质检与自举演化引擎
         Synthesizer --> Pareto[帕累托天平: 零负优化与过度修正仲裁]
@@ -65,9 +67,9 @@ flowchart TD
 
 ---
 
-## 🧠 先知专家池核心公理 (The 15 Grand Expert Domains)
+## 🧠 先知专家池核心公理 (The 17 Grand Expert Domains)
 
-本体系汲取**查理·芒格多元思维模型格栅 (Latticework of Mental Models)** 与全网顶级认知科学精髓，构建了 15 大不可动摇的公理专家池：
+本体系汲取**查理·芒格多元思维模型格栅 (Latticework of Mental Models)** 与全网顶级认知科学精髓，构建了 17 大不可动摇的公理专家池：
 
 | 专家模块 | 第一性原理 | 核心公理推导 | 解决的问题 |
 |---|---|---|---|
@@ -86,6 +88,8 @@ flowchart TD
 | [`experts/strategy-ooda.md`](experts/strategy-ooda.md) | **动态博弈大战略与OODA环** (Grand Strategy & OODA) | 约翰·博伊德 OODA 动态决策环；克劳塞维茨重心法则 (Schwerpunkt)；奇正相生；克里斯坦森破坏性创新 | 错失战机、反应迟钝、多头出击无突破口 |
 | [`experts/thermodynamics-statistical.md`](experts/thermodynamics-statistical.md) | **热力学、统计物理与遍历性** (Thermodynamics & Ergodicity) | 玻尔兹曼负熵流（对抗内卷衰亡）；普里戈金耗散结构自组织；遍历性认识论（严禁踩踏破产吸收态） | 组织僵化死亡、违法踩雷致命吸收态 |
 | [`experts/semiotics-language.md`](experts/semiotics-language.md) | **语言哲学与认知隐喻** (Semiotics & Language) | 维特根斯坦“语言游戏说”（意义即用法）；奥斯汀言语行为理论（以言行事）；皮尔斯指示符号；概念隐喻 | 沉迷大词黑话、假大空自嗨、无法建立通感 |
+| [`experts/lateral-breakthrough.md`](experts/lateral-breakthrough.md) | **破框思维与TRIZ矛盾分离** (Lateral & Out-of-the-Box) | 九点隐性假设粉碎律；瓦茨拉维克二阶改变（跳出系统本身）；德博诺 PO 挑衅算子；TRIZ四大矛盾分离；正交升维 | 思维撞墙、落入平庸妥协折中、局限在系统内部修补 |
+| [`experts/epistemic-latticework.md`](experts/epistemic-latticework.md) | **认知格栅与人类误判学** (Epistemic Latticework) | 地图不是疆域；查理·芒格25种误判心理学（证实偏见/不一致规避/权威从众）；能力圈边界；模拟退火全局跃迁 | 误判现实、过度自信、被困在局部最优小山丘 |
 
 ---
 
@@ -109,7 +113,7 @@ the-oracle/
 │   ├── pareto-arbiter.md         # 帕累托改进仲裁器
 │   ├── red-team.md               # 三维红队对抗攻击协议
 │   └── bootstrapping.md          # 递归自指自举进化协议
-├── experts/                      # 先知公理专家池 (The 15 Grand Domains)
+├── experts/                      # 先知公理专家池 (The 17 Grand Domains)
 │   ├── game-theory.md            # 博弈论与昂贵信号专家
 │   ├── information-physics.md    # 物理与信息控制论专家
 │   ├── cognitive-neuro.md        # 认知神经科学专家
@@ -124,17 +128,9 @@ the-oracle/
 │   ├── computation-network.md    # 计算理论与网络拓扑学专家
 │   ├── strategy-ooda.md          # 动态博弈大战略与OODA环专家
 │   ├── thermodynamics-statistical.md # 热力学、统计物理与遍历性专家
-│   └── semiotics-language.md     # 语言哲学与认知符号学专家
-├── scripts/                      # 自动化确定性工程工具链 (Zero Dependencies)
-│   ├── oracle_eval.py            # 跨领域公理量化评估与帕累托仲裁器 (Copy/Code/Strategy/Skill)
-│   ├── oracle_mutate.py          # 公理级变异与重构算子执行引擎
-│   ├── oracle_loop.py            # 递归多代自指进化收敛引擎 (TOC 瓶颈诊断 + 不动点收敛)
-│   └── run_oracle_audit.sh       # 5 阶段 CI/CD 自动化回归质检流水线
-├── tests/                        # 单元测试套件
-│   └── test_oracle_engine.py     # 9 大跨学科公理单元测试 (100% 通过)
-└── benchmarks/                   # 黄金通关标杆案例
-    └── case-human-article.md     # 商业文案心智重构实战全景
-```
+│   ├── semiotics-language.md     # 语言哲学与认知符号学专家
+│   ├── lateral-breakthrough.md   # 破框思维、横向跳跃与TRIZ矛盾分离专家
+│   └── epistemic-latticework.md  # 认知格栅、元认识论与人类误判学专家
 ├── scripts/                      # 自动化确定性工程工具链 (Zero Dependencies)
 │   ├── oracle_eval.py            # 跨领域公理量化评估与帕累托仲裁器 (Copy/Code/Strategy/Skill)
 │   ├── oracle_mutate.py          # 公理级变异与重构算子执行引擎

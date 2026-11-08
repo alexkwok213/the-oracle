@@ -277,7 +277,8 @@ SKILL_VERIFICATION_PATTERNS = [
 ]
 SKILL_AXIOMATIC_PATTERNS = [
     r"第一性原理", r"香农", r"熵", r"博弈", r"纳什", r"扎哈维", r"昂贵信号",
-    r"盖尔定律", r"约束理论", r"二阶思维", r"奥卡姆剃刀", r"珀尔因果", r"反脆弱"
+    r"盖尔定律", r"约束理论", r"二阶思维", r"奥卡姆剃刀", r"珀尔因果", r"反脆弱",
+    r"破框", r"横向思维", r"二阶改变", r"TRIZ", r"最终理想解", r"隐性假设", r"正交升维"
 ]
 
 class SkillEvaluator:

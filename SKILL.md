@@ -55,20 +55,21 @@ flowchart TD
 
 ---
 
-## 门控路由工作流 (Gating Router Protocol)
+## 门控路由工作流 (Gating Router & Breakthrough Protocol)
 
-当接收到技能创建或优化请求时，执行标准四步演绎：
+当接收到技能创建、瓶颈攻坚或系统优化请求时，执行公理级五步破框演绎：
 
 ```
-[步骤 1: 矛盾解构] → 剥离行话与表面文字，识别本质所属学科（博弈/信道/心智/系统/分配）。
-[步骤 2: 专家组合] → 激活 Expert Axiom Pool 中 2~3 个核心专家，调取对应第一性原理。
-[步骤 3: 帕累托推导] → 重塑技能规程，设定“帕累托天平”，确保新方案不以牺牲原有优势为代价。
-[步骤 4: 红队审查] → 自动扮演挑刺受众、法务黑客与过度修正仲裁员，封死漏洞。
+[步骤 1: 矛盾解构] → 剥离表面行话与形式主义文字，识别底层物理、博弈与心智矛盾。
+[步骤 2: 破框审计 (Think Out of the Box)] → 审查九点谜题式隐性人造假设（Assumption Audit），触发 PO 挑衅诱导算子与 TRIZ 四大矛盾分离原理，实现瓦茨拉维克二阶改变（跳出系统本身，重构元规则）。
+[步骤 3: 专家格栅组合] → 激活 Expert Axiom Pool (17 Grand Domains) 中 2~3 个核心专家，调取对应第一性原理与正交升维变量 (Z 轴)。
+[步骤 4: 帕累托推导] → 重塑技能规程，设定“帕累托天平”，坚决拒绝平庸妥协，确保全维度单调不减 (ΔVi >= 0)。
+[步骤 5: 三维红队对抗] → 自动扮演挑刺受众、法务黑客与过度修正仲裁员，封死漏洞，输出可量化验证的免检级交付成果。
 ```
 
 ---
 
-## 专家池与核心公理索引 (Expert Matrix - 15 Grand Axiomatic Domains)
+## 专家池与核心公理索引 (Expert Matrix - 17 Grand Axiomatic Domains)
 
 | 专家领域 | 适用场景 | 核心第一性原理 | 支撑模块 |
 |---|---|---|---|
@@ -87,6 +88,8 @@ flowchart TD
 | **13. 大战略博弈与OODA环** | 竞争破局、错位竞争、市场突破、破坏性创新 | 约翰·博伊德 OODA 动态环、克劳塞维茨重心法则 (Schwerpunkt)、破坏性创新 | [experts/strategy-ooda.md](experts/strategy-ooda.md) |
 | **14. 热力学与统计物理** | 抗熵增衰亡、组织活力维持、绝境破产防范 | 玻尔兹曼负熵流、普里戈金耗散结构自组织、遍历性破产吸收态守护 | [experts/thermodynamics-statistical.md](experts/thermodynamics-statistical.md) |
 | **15. 语言哲学与符号认知** | 黑话洗净、概念普及、信任穿透、情感通感 | 维特根斯坦语言游戏说、奥斯汀言语行为理论、皮尔斯符号三元组、身体化隐喻 | [experts/semiotics-language.md](experts/semiotics-language.md) |
+| **16. 破框思维与TRIZ矛盾分离** | 破除盒界、颠覆创新、消除妥协、横向破局 | 九点隐性假设粉碎律、瓦茨拉维克二阶改变、德博诺 PO 挑衅算子、TRIZ 四大矛盾分离、正交升维 | [experts/lateral-breakthrough.md](experts/lateral-breakthrough.md) |
+| **17. 认知格栅与人类误判学** | 盲区排查、战略清醒、元认识论、避免愚蠢 | 地图不是疆域、查理·芒格 25 种误判心理学、能力圈边界、模拟退火全局跳跃 | [experts/epistemic-latticework.md](experts/epistemic-latticework.md) |
 
 ---
 
