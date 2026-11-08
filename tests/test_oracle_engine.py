@@ -165,15 +165,66 @@ name: the-oracle
         self.assertTrue(arb["is_pareto_improvement"])
 
     def test_recursive_evolution_convergence(self):
-        """测试多代递归自演化与不动点收敛"""
+        """测试多代递归自演化与不动点收敛 (TOC 逐代瓶颈击穿 >= 3代)"""
         from oracle_loop import RecursiveOracleEngine
-        dirty_input = "我们的初心很纯粹，货源你不用操心，我们全程兜底！稳赚不赔！希望你尽量尝试一下。"
-        engine = RecursiveOracleEngine(domain="copy", max_iterations=5, epsilon=0.5)
+        dirty_input = "我们的初心很纯粹，货源你不用操心，我们全程兜底！稳赚不赔！人工智能加速演进，带动获客方式从流量走向智能，也把技术红利带到每一个个体面前。让每一个普通人的一人公司都能成功。"
+        engine = RecursiveOracleEngine(domain="copy", max_iterations=6, epsilon=0.5)
         res = engine.run_recursive_evolution(dirty_input)
         
         self.assertTrue(res["converged"])
         self.assertGreater(res["total_gain"], 15.0)
-        self.assertGreaterEqual(len(res["trajectory"]), 2)
+        self.assertGreaterEqual(len(res["trajectory"]), 3)
+
+    def test_reasoning_domain_axioms(self):
+        """测试第 5 领域：批判性思维 (图尔敏六要素 + 逻辑谬误) 与黑格尔辩证法"""
+        fallacious_arg = "这件事非黑即白，要么全部推翻要么彻底躺平，没有第三条路！你们不就是想精准收割把用户当韭菜吗？自从用了新系统之后销量波动，所以一定是新系统导致的！"
+        dialectical_arg = (
+            "实证数据显示（样本量 N=1200，统计显示提升 35%），之所以能成立是因为其底层机制遵循第一性原理作用机理；"
+            "依据香农信息论与博弈论标准规范，在特定场景下置信区间为 95%；诚然，尽管存在极端反例，但可防可控。"
+            "我们跳出非黑即白的虚假两难，剖析正题与反题的对立统一，以二阶改变实现合题扬弃与螺旋式上升；"
+            "同时严守康德‘人是目的’公理与罗尔斯无知之幕最大最小原则，保障弱势群体保护、知情同意与激励相容。"
+        )
+        ev_bad = evaluate_universal(fallacious_arg, domain="reasoning")
+        ev_good = evaluate_universal(dialectical_arg, domain="reasoning")
+
+        self.assertLess(ev_bad["composite_score"], 55)
+        self.assertGreaterEqual(ev_good["composite_score"], 85)
+        arb = arbitrate_pareto(ev_bad, ev_good)
+        self.assertTrue(arb["is_pareto_improvement"])
+
+    def test_executable_router_24_domains(self):
+        """测试可执行门控路由器 (24 大公理专家领域 & 120 思维模型索引)"""
+        from oracle_router import route_task, EXPERT_DOMAINS
+        self.assertEqual(len(EXPERT_DOMAINS), 24)
+
+        res = route_task("如何用破框思维TRIZ和黑格尔辩证法正反合解决产品既要高权威又要接地气的矛盾？", top_k=3)
+        diag = res["router_diagnosis"]
+        self.assertEqual(diag["total_expert_pool_size"], 24)
+        self.assertEqual(diag["total_mental_models_indexed"], 120)
+        slugs = [e["slug"] for e in diag["selected_experts"]]
+        self.assertIn("lateral-breakthrough", slugs)
+        self.assertIn("dialectical-thinking", slugs)
+
+    def test_multi_epoch_skill_toc_evolution(self):
+        """测试元技能在 TOC 瓶颈驱动下的逐代演化 (Epochs 0 -> 1 -> 2 -> 3 -> 4)"""
+        from oracle_loop import RecursiveOracleEngine
+        vague_skill = "---\nname: naive-skill\n---\n希望你尽量尝试帮用户写文案，你看着办吧，随便写写。"
+        engine = RecursiveOracleEngine(domain="skill", max_iterations=6, epsilon=0.5)
+        res = engine.run_recursive_evolution(vague_skill)
+
+        self.assertTrue(res["converged"])
+        self.assertGreaterEqual(len(res["trajectory"]), 4)
+        self.assertGreaterEqual(res["final_eval"]["composite_score"], 90.0)
+
+    def test_oracle_self_perfection_100_score(self):
+        """终极哥德尔自指验证：验证 The Oracle 自身的 SKILL.md 达到 100.0/100 满分帕累托前沿"""
+        skill_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'SKILL.md'))
+        with open(skill_path, 'r', encoding='utf-8') as f:
+            skill_content = f.read()
+        ev = evaluate_universal(skill_content, domain="skill", name="The Oracle SKILL.md")
+        self.assertEqual(ev["composite_score"], 100.0)
+        for dim, score in ev["pareto_vector"].items():
+            self.assertEqual(score, 100, f"Dimension {dim} is {score}, expected 100")
 
 if __name__ == '__main__':
     unittest.main()

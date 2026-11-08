@@ -14,10 +14,10 @@ from typing import Dict, List, Any, Tuple, Optional
 
 # 引入核心评估、仲裁与变异算子引擎
 from oracle_eval import evaluate_universal, arbitrate_pareto, print_universal_report
-from oracle_mutate import mutate_text
+from oracle_mutate import mutate_text, mutate_by_bottleneck
 
 class RecursiveOracleEngine:
-    def __init__(self, domain: str = "auto", max_iterations: int = 5, epsilon: float = 0.5):
+    def __init__(self, domain: str = "auto", max_iterations: int = 6, epsilon: float = 0.5):
         self.domain = domain
         self.max_iterations = max_iterations
         self.epsilon = epsilon
@@ -45,6 +45,11 @@ class RecursiveOracleEngine:
             "incentive_compatibility": "激励机制不相容，依赖道德自律。解法：重新设计分润规则，使自利行为促进公利。",
             "resilience_anti_commons": "存在公地悲剧与存量内卷风险。解法：通过公域获客引入系统外部增量，打破囚徒困境。",
             "economic_clarity": "经济模型模糊。解法：量化核心商业指标与转化漏斗。",
+            # Reasoning Domain
+            "toulmin_completeness": "图尔敏六要素残缺，缺乏实证数据、作用机理或限定词反驳防御。解法：补齐 Data/Warrant/Backing/Qualifier/Rebuttal。",
+            "dialectical_synthesis": "陷入单向度或平庸折中，缺乏黑格尔正反合扬弃。解法：直面正题与反题核心矛盾，以二阶改变实现高维合题。",
+            "fallacy_immunity": "存在虚假两难、稻草人、强加因果等逻辑谬误。解法：执行逻辑剃刀，斩断非形式逻辑谬误。",
+            "ethical_alignment": "违背康德‘人是目的’或罗尔斯无知之幕最大最小原则。解法：消除操纵性收割话术，锚定长期正外部性与弱势保护。",
             # Skill / Meta Domain
             "directive_density": "指令密度偏低或包含含糊愿望词。解法：剔除'尽量/可能'，换成'MUST/必须'并结构化流程。",
             "boundary_safety": "缺乏对抗防御与红线约束。解法：注入边界控制与红队防线，定义异常降级回滚策略。",
@@ -85,8 +90,9 @@ class RecursiveOracleEngine:
 
         for epoch in range(1, self.max_iterations + 1):
             final_epoch = epoch
-            # 1. 执行公理变异
-            mutated_text, applied_logs = mutate_text(current_text, domain=detected_domain)
+            bottleneck_now, _ = self.diagnose_bottleneck(current_eval)
+            # 1. 优先针对当前最大 TOC 约束瓶颈执行靶向公理变异
+            mutated_text, applied_logs = mutate_by_bottleneck(current_text, detected_domain, bottleneck_now)
             
             # 如果没有可触发的算子变异，说明规则库已穷尽当前文本潜能
             if mutated_text == current_text or not applied_logs:
@@ -99,7 +105,7 @@ class RecursiveOracleEngine:
             arb = arbitrate_pareto(current_eval, cand_eval)
             delta = arb["composite_delta"]
             
-            print(f"[Epoch {epoch}] 变异算子生效 ({len(applied_logs)} 项变异)")
+            print(f"[Epoch {epoch}] 靶向击穿瓶颈 [{bottleneck_now.upper()}] ({len(applied_logs)} 项变异)")
             print(f"          评估得分: {cand_eval['composite_score']} / 100 (ΔScore: {delta:+}分)")
             print(f"          帕累托裁决: {arb['verdict']}")
             
@@ -109,6 +115,7 @@ class RecursiveOracleEngine:
                 current_text = mutated_text
                 current_eval = cand_eval
                 b_next, a_next = self.diagnose_bottleneck(current_eval)
+                print(f"          下一轮约束瓶颈转移至: [{b_next.upper()}] (得分: {current_eval['pareto_vector'][b_next]})")
                 trajectory.append({
                     "epoch": epoch,
                     "score": current_eval["composite_score"],
@@ -155,8 +162,8 @@ class RecursiveOracleEngine:
 def main():
     parser = argparse.ArgumentParser(description="The Oracle Recursive Self-Evolution Loop")
     parser.add_argument("input_target", help="待迭代的目标文本或文件路径")
-    parser.add_argument("--domain", choices=["auto", "copy", "code", "strategy", "skill"], default="auto", help="优化领域")
-    parser.add_argument("--max-iter", type=int, default=5, help="最大自演化代数")
+    parser.add_argument("--domain", choices=["auto", "copy", "code", "strategy", "skill", "reasoning"], default="auto", help="优化领域")
+    parser.add_argument("--max-iter", type=int, default=6, help="最大自演化代数")
     parser.add_argument("--output", "-o", help="输出演化终态文件的路径")
     
     args = parser.parse_args()

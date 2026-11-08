@@ -1,8 +1,8 @@
-# 人类前 100 伟大思维模型与终极理论全景索引
-# (The Top 100 Mental Models & Grand Theories of Humanity)
+# 人类前 120 伟大思维模型与终极理论全景索引
+# (The Top 120 Mental Models & Grand Theories of Humanity)
 
 > **“在你的头脑里必须拥有一张思维模型的网格（A Latticework of Mental Models），你必须将你的经验悬挂在上面。” —— 查理·芒格 (Charlie Munger)**  
-> **“掌握了这 80 到 100 个思维模型，就能承载 90% 的重力，让你成为一个拥有普世智慧的人。” —— 彼得·贝弗林《探索智慧：从达尔文到芒格》**
+> **“掌握了这 80 到 100+ 个核心思维模型，就能承载 95% 的重力，让你成为一个拥有普世智慧的人。” —— 彼得·贝弗林《探索智慧：从达尔文到芒格》**
 
 ---
 
@@ -18,6 +18,8 @@
 * [第八章：认知心理与行为经济学模型 (71 - 80)](#第八章认知心理与行为经济学模型-71---80)
 * [第九章：人类误判心理学与偏见免疫 (81 - 90)](#第九章人类误判心理学与偏见免疫-81---90)
 * [第十章：博弈、大战略与伦理契约 (91 - 100)](#第十章博弈大战略与伦理契约-91---100)
+* [第十一章：系统基模、干预杠杆与精益实验 (101 - 110)](#第十一章系统基模干预杠杆与精益实验-101---110)
+* [第十二章：叙事美学、范畴同构与终极元定理 (111 - 120)](#第十二章叙事美学范畴同构与终极元定理-111---120)
 
 ---
 
@@ -191,12 +193,46 @@
 
 ---
 
-## 🧭 总结：The Oracle 如何调用人类前 100 伟大理论？
+## 第十一章：系统基模、干预杠杆与精益实验 (101 - 110)
 
-这 **100 大伟大思维模型**，正是 The Oracle 的认知母体。
-它们不是 100 张孤立的卡片，而是像**化学元素周期表**一样，通过 **20 大先知公理专家池（The 20 Grand Domains）** 与 **门控路由器（Router）** 动态咬合：
+| 编号 | 思维模型 (中英文) | 奠基人 / 来源 | 第一性原理极简表述 | The Oracle 承载专家模块 |
+|:---:|---|---|---|:---:|
+| **101** | **梅多斯 12 大系统干预杠杆点 (Meadows' 12 Leverage Points)** | 德内拉·梅多斯 | 改数字参数是最低效的第 12 级干预；最高效的第 1~3 级杠杆是改变系统心智范式、总目标与自组织规则。 | [`experts/system-archetypes.md`](../experts/system-archetypes.md) |
+| **102** | **舍本逐末与饮鸩止渴基模 (Shifting the Burden Archetype)** | 彼得·圣吉《第五项修炼》 | 短期症状解的负反馈越快，越会引发对止痛药的成瘾依赖，并导致系统底层根本解决能力不可逆萎缩。 | [`experts/system-archetypes.md`](../experts/system-archetypes.md) |
+| **103** | **成长上限基模 (Limits to Growth Archetype)** | 彼得·圣吉 / 系统动力学 | 任何指数级增强飞轮终将撞上隐性资源瓶颈；破局不应猛踩增强油门，而必须提前拆除约束回路的上限。 | [`experts/system-archetypes.md`](../experts/system-archetypes.md) |
+| **104** | **目标侵蚀与温水煮青蛙 (Drifting Goals Archetype)** | 系统动力学学派 | 当现实与目标出现差距时，平庸系统倾向于悄悄下调目标标准而非改进现实，最终引发品质崩盘；必须物理锁死刚性底线。 | [`experts/system-archetypes.md`](../experts/system-archetypes.md) |
+| **105** | **公地悲剧与富者愈富基模 (Tragedy of the Commons & Success to the Successful)** | 加勒特·哈丁 / 彼得·圣吉 | 个体理性对公共资源池的极度索取必致集体毁灭；必须重构私有产权或反馈税制，将外部成本内部化。 | [`experts/system-archetypes.md`](../experts/system-archetypes.md) |
+| **106** | **古德哈特定律与坎贝尔定律 (Goodhart's & Campbell's Law)** | 查尔斯·古德哈特 / 唐纳德·坎贝尔 | “当一个观测指标变成考核目标时，它就不再是一个好指标。” 必须采用正交多维向量与对偶反作弊指标。 | [`experts/complex-systems.md`](../experts/complex-systems.md) |
+| **107** | **多臂老虎机探索-利用权衡 (Explore vs Exploit & UCB)** | 赫伯特·罗宾斯 / 强化学习 | 在利用已知最优（Exploit）与探索未知潜力（Explore）间遵循置信上限（UCB）动态分配算力，避免锁定局部次优。 | [`experts/lean-experimentation.md`](../experts/lean-experimentation.md) |
+| **108** | **精益创业构建-测量-学习飞轮 (Build-Measure-Learn & MVP)** | 埃里克·莱斯 | 商业竞争的本质不是比谁初稿完美，而是以最小可行产物（MVP）最大化单位时间内的有效实证认知增量（Validated Learning）。 | [`experts/lean-experimentation.md`](../experts/lean-experimentation.md) |
+| **109** | **费曼学习法与去术语测试 (Feynman Technique)** | 理查德·费曼 | 如果你不能向一个 12 岁外行用日常大白话讲透一个概念，说明你根本没懂，只是记住了行业黑话的空壳名字。 | [`experts/lean-experimentation.md`](../experts/lean-experimentation.md) |
+| **110** | **刻意练习与高阶心理表征 (Deliberate Practice & Mental Representations)** | 安德斯·艾利克森 | 机械重复一万小时毫无意义；唯有在舒适区边缘针对薄弱点进行带毫秒级即时反馈的突破，才能构筑大师级心理表征。 | [`experts/lean-experimentation.md`](../experts/lean-experimentation.md) |
+
+---
+
+## 第十二章：叙事美学、范畴同构与终极元定理 (111 - 120)
+
+| 编号 | 思维模型 (中英文) | 奠基人 / 来源 | 第一性原理极简表述 | The Oracle 承载专家模块 |
+|:---:|---|---|---|:---:|
+| **111** | **坎贝尔英雄之旅与单一神话 (The Hero's Journey - Monomyth)** | 约瑟夫·坎贝尔 | 人类跨文化神话共享同一母体结构；在商业叙事中，用户才是渡劫归来的英雄，品牌与创作者永远是赠送魔杖的智者导师。 | [`experts/narrative-aesthetics.md`](../experts/narrative-aesthetics.md) |
+| **112** | **亚里士多德三幕剧与卡塔西斯净化 (Three-Act Structure & Catharsis)** | 亚里士多德《诗学》 | 极致叙事通过“建置失衡—对抗升级—高潮顿悟”逼出怜悯与敬畏，实现灵魂压抑情绪的彻底宣泄与升华。 | [`experts/narrative-aesthetics.md`](../experts/narrative-aesthetics.md) |
+| **113** | **蔡加尼克记忆效应与完形闭合律 (Zeigarnik Effect & Gestalt Closure)** | 布鲁玛·蔡加尼克 / 格式塔学派 | 人脑对未完成的悬念任务留存极高认知张力与记忆度；开篇黄金 3 秒必须制造“开放缺口（Open Loop）”钩住注意力。 | [`experts/narrative-aesthetics.md`](../experts/narrative-aesthetics.md) |
+| **114** | **卡尼曼峰终定律与过程忽视 (Peak-End Rule & Duration Neglect)** | 丹尼尔·卡尼曼 | 人类对一段体验的记忆几乎完全由“情绪最高潮（Peak）”和“结束瞬间（End）”的均值决定，必须拒绝平庸并打造震撼收尾。 | [`experts/narrative-aesthetics.md`](../experts/narrative-aesthetics.md) |
+| **115** | **皮尔斯符号学与莱考夫具身隐喻 (Peircean Semiotics & Embodied Metaphor)** | C.S. 皮尔士 / 乔治·莱考夫 | 人类只能通过身体感官经验（冷暖、轻重、软硬）去理解抽象概念；高阶传播必须将抽象符号转化为具身隐喻与指示铁证。 | [`experts/semiotics-language.md`](../experts/semiotics-language.md) |
+| **116** | **维特根斯坦语言游戏与奥斯汀言语行为 (Language Games & Speech Acts)** | 维特根斯坦 / J.L. 奥斯汀 | “说话即做事（施事行为）”；词语的意义不在于字典定义，而在于它在特定生活形式与关系场域中的实际效用。 | [`experts/semiotics-language.md`](../experts/semiotics-language.md) |
+| **117** | **范畴论与跨学科函子同构映射 (Category Theory & Functorial Isomorphism)** | 艾伦伯格 / 麦克莱恩 | 宇宙万物共享相同的底层数学拓扑结构；通过保结构函子映射，可将物理学、生物学中已解透的定理无损迁移至商业与代码。 | [`experts/category-isomorphism.md`](../experts/category-isomorphism.md) |
+| **118** | **诺特定理与贝索斯十年战略不变量 (Noether's Theorem & Strategic Invariants)** | 埃米·诺特 / 杰夫·贝索斯 | 物理系统的每一项对称性都对应一个守恒律；不要只追逐未来十年会变什么，必须把底座建在未来十年绝不会改变的不变量上。 | [`experts/category-isomorphism.md`](../experts/category-isomorphism.md) |
+| **119** | **韦斯特规模法则与异速生长幂律 (West's Scaling Laws)** | 杰弗里·韦斯特《规模》 | 生物与组织规模遵循 $Y = Y_0 M^\beta$ 幂律；基础设施呈 $\beta \approx 0.75$ 亚线性节流，而信息创新必须呈 $\beta \approx 1.15$ 超线性涌现，否则必死于官僚热寂。 | [`experts/category-isomorphism.md`](../experts/category-isomorphism.md) |
+| **120** | **冯·诺依曼自复制自动机与侯世达奇异环 (Self-Replicating Automata & Strange Loops)** | 约翰·冯·诺依曼 / 侯世达 | 真正的终极智能必须将“自我描述蓝图（Mind）”与“通用构造器（Body）”闭环咬合，在层级缠绕的奇异环中实现自指演进与永续进化。 | [`experts/category-isomorphism.md`](../experts/category-isomorphism.md) |
+
+---
+
+## 🧭 总结：The Oracle 如何调用人类前 120 伟大理论？
+
+这 **120 大伟大思维模型**，正是 The Oracle 的认知母体。
+它们不是 120 张孤立的卡片，而是像**化学元素周期表**一样，通过 **24 大先知公理专家池（The 24 Grand Domains）** 与 **门控路由器（Router & `scripts/oracle_router.py`）** 动态咬合：
 
 1. **输入阶段**：Router 通过“三问法则”解构问题本质；
 2. **调度阶段**：根据问题性质，自动激活 2~3 个承载了对应思维模型的 Expert 模块；
-3. **推导阶段**：运用第一性原理、破框思维（TRIZ/二阶改变）与辩证法扬弃，推动帕累托最优边界（$\Delta V_i \ge 0$）；
+3. **推导阶段**：运用第一性原理、破框思维（TRIZ/二阶改变）、系统干预杠杆与辩证法扬弃，推动帕累托最优边界（$\Delta V_i \ge 0$）；
 4. **输出阶段**：经图尔敏论证与红队对抗审计，输出无可辩驳的免检级交付物。

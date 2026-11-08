@@ -279,7 +279,8 @@ SKILL_AXIOMATIC_PATTERNS = [
     r"第一性原理", r"香农", r"熵", r"博弈", r"纳什", r"扎哈维", r"昂贵信号",
     r"盖尔定律", r"约束理论", r"二阶思维", r"奥卡姆剃刀", r"珀尔因果", r"反脆弱",
     r"破框", r"横向思维", r"二阶改变", r"TRIZ", r"最终理想解", r"隐性假设", r"正交升维",
-    r"辩证", r"黑格尔", r"正反合", r"扬弃", r"批判性思维", r"图尔敏", r"无知之幕", r"人是目的", r"保罗-埃尔德"
+    r"辩证", r"黑格尔", r"正反合", r"扬弃", r"批判性思维", r"图尔敏", r"无知之幕", r"人是目的", r"保罗-埃尔德",
+    r"系统基模", r"杠杆点", r"峰终定律", r"英雄之旅", r"蔡加尼克", r"范畴论", r"同构", r"战略不变量", r"费曼", r"心理表征"
 ]
 
 class SkillEvaluator:
@@ -328,10 +329,99 @@ class SkillEvaluator:
         }
 
 # ==========================================
-# 5. 全局自动域检测与统一仲裁器
+# 5. 批判性论证与辩证逻辑领域公理 (Reasoning Domain)
+# ==========================================
+REASONING_TOULMIN_PATTERNS = {
+    "data_evidence": [r"实证数据", r"统计显示", r"临床.*数据", r"实验表明", r"\d+(\.\d+)?%", r"样本量", r"铁证"],
+    "warrant_mechanism": [r"作用机理", r"因果机制", r"第一性原理表明", r"物理定律决定了", r"内在逻辑在于", r"之所以能成立是因为其底层机制"],
+    "backing_axiom": [r"根据.*定律", r"依据.*定理", r"遵循.*公理", r"研究文献", r"标准规范"],
+    "qualifier_boundary": [r"在.*前提下", r"适用边界为", r"置信区间", r"在\d+%的概率下", r"特定场景下"],
+    "rebuttal_defense": [r"诚然", r"尽管存在.*反例", r"例外情况是", r"除非遇到", r"反方可能会质疑"]
+}
+
+REASONING_DIALECTICAL_PATTERNS = [
+    r"正题", r"反题", r"合题", r"扬弃", r"对立统一", r"正反合", r"二阶改变",
+    r"跳出非黑即白", r"更高维度的整合", r"螺旋式上升", r"矛盾分离"
+]
+
+REASONING_FALLACY_PATTERNS = [
+    (r"要么.*要么.*没有第[三3]条路|非黑即白|只有这两条路", "虚假两难谬误 (False Dilemma)"),
+    (r"你们不就是想|说白了你就是为了", "稻草人/动机揣测谬误 (Straw Man / Ad Hominem)"),
+    (r"自从.*之后.*所以一定是.*导致的", "强加因果谬误 (Post Hoc Fallacy)"),
+    (r"专家都说了不能怀疑|绝对真理不容置疑", "盲从权威/教条主义谬误 (Appeal to Blind Authority)"),
+    (r"一旦.*就会彻底毁灭.*万劫不复", "滑坡谬误 (Slippery Slope)")
+]
+
+REASONING_ETHICAL_VIOLATIONS = [
+    r"精准收割", r"洗脑转化", r"利用人性弱点榨取", r"把用户当韭菜", r"信息差欺诈"
+]
+
+REASONING_ETHICAL_ANCHORS = [
+    r"人是目的", r"无知之幕", r"最大最小原则", r"弱势群体保护", r"知情同意", r"激励相容", r"长期正外部性"
+]
+
+class ReasoningEvaluator:
+    def __init__(self, text: str):
+        self.text = text.strip()
+
+    def evaluate(self) -> Dict[str, Any]:
+        """基于图尔敏六要素、黑格尔辩证法、逻辑谬误学与康德/罗尔斯伦理公理进行量化评估"""
+        toulmin_hits = {}
+        for elem, patterns in REASONING_TOULMIN_PATTERNS.items():
+            hits = [m for p in patterns for m in re.findall(p, self.text)]
+            if hits:
+                toulmin_hits[elem] = len(hits)
+
+        dialectics = [m for p in REASONING_DIALECTICAL_PATTERNS for m in re.findall(p, self.text)]
+        fallacies = []
+        for p, label in REASONING_FALLACY_PATTERNS:
+            m = re.findall(p, self.text)
+            if m:
+                fallacies.append({"fallacy": label, "matched": m})
+
+        ethical_violations = [m for p in REASONING_ETHICAL_VIOLATIONS for m in re.findall(p, self.text)]
+        ethical_anchors = [m for p in REASONING_ETHICAL_ANCHORS for m in re.findall(p, self.text)]
+
+        # V1: 图尔敏论证完备度 (Toulmin Completeness)
+        toulmin_score = min(100, max(20, 40 + len(toulmin_hits) * 12))
+        # V2: 辩证综合与扬弃度 (Dialectical Synthesis)
+        dialectical_score = min(100, max(20, 45 + len(dialectics) * 15))
+        # V3: 逻辑谬误免疫度 (Fallacy Immunity)
+        fallacy_score = max(10, 100 - len(fallacies) * 25)
+        # V4: 伦理契约对齐度 (Ethical Alignment)
+        ethical_score = min(100, max(10, 75 + len(ethical_anchors) * 10 - len(ethical_violations) * 35))
+
+        v = {
+            "toulmin_completeness": toulmin_score,
+            "dialectical_synthesis": dialectical_score,
+            "fallacy_immunity": fallacy_score,
+            "ethical_alignment": ethical_score
+        }
+        composite = round(
+            v["toulmin_completeness"] * 0.30
+            + v["dialectical_synthesis"] * 0.25
+            + v["fallacy_immunity"] * 0.25
+            + v["ethical_alignment"] * 0.20,
+            1
+        )
+        return {
+            "domain": "reasoning",
+            "composite_score": composite,
+            "pareto_vector": v,
+            "details": {
+                "toulmin_elements_present": list(toulmin_hits.keys()),
+                "dialectical_markers": list(set(dialectics)),
+                "detected_fallacies": fallacies,
+                "ethical_anchors": list(set(ethical_anchors)),
+                "ethical_violations": list(set(ethical_violations))
+            }
+        }
+
+# ==========================================
+# 6. 全局自动域检测与统一仲裁器
 # ==========================================
 def detect_domain(text: str) -> str:
-    """自动判断输入是代码、文案、技能架构还是商业战略"""
+    """自动判断输入是代码、文案、技能架构、批判辩证论证还是商业战略"""
     code_indicators = [r'def\s+\w+\(', r'class\s+\w+[:\(]', r'import\s+\w+', r'function\s*\(', r'const\s+\w+\s*=']
     if any(re.search(p, text) for p in code_indicators):
         return "code"
@@ -342,6 +432,10 @@ def detect_domain(text: str) -> str:
     ]
     if any(re.search(p, text) for p in skill_indicators):
         return "skill"
+
+    reasoning_indicators = [r'图尔敏', r'正题', r'反题', r'合题', r'扬弃', r'虚假两难', r'非黑即白', r'无知之幕']
+    if len([p for p in reasoning_indicators if re.search(p, text)]) >= 2:
+        return "reasoning"
 
     strategy_indicators = [r'商业模式', r'机制设计', r'分润', r'代币经济', r'飞轮', r'生态位', r'纳什均衡']
     if len([p for p in strategy_indicators if re.search(p, text)]) >= 2:
@@ -382,6 +476,8 @@ def evaluate_universal(text: str, domain: str = "auto", name: str = "Candidate")
         res = SkillEvaluator(text).evaluate()
     elif domain == "strategy":
         res = StrategyEvaluator(text).evaluate()
+    elif domain == "reasoning":
+        res = ReasoningEvaluator(text).evaluate()
     else:
         res = CopyEvaluator(text).evaluate()
         
@@ -420,6 +516,14 @@ def print_universal_report(res: Dict[str, Any]):
         print(f"✓ 识别出的核心护城河: {d.get('identified_moats')}")
         print(f"✓ 激励相容机制设计: {d.get('incentive_mechanisms')}")
         print(f"✓ 公地悲剧/系统性风险: {d.get('identified_systemic_risks')}")
+    elif res["domain"] == "reasoning":
+        print(f"✓ 图尔敏论证要素覆盖: {d.get('toulmin_elements_present')}")
+        print(f"✓ 辩证思维与扬弃标记: {d.get('dialectical_markers')}")
+        if d.get("detected_fallacies"):
+            print(f"⚠️ 识别出的逻辑谬误: {d.get('detected_fallacies')}")
+        else:
+            print("✓ 零形式/非形式逻辑谬误 (Zero Fallacies Detected)")
+        print(f"✓ 伦理对齐锚点: {d.get('ethical_anchors')}")
     elif res["domain"] == "skill":
         print(f"✓ 指令密度与行动项: {d.get('directives_count')} 处")
         if d.get("vague_phrases"):
@@ -434,7 +538,7 @@ def print_universal_report(res: Dict[str, Any]):
 def main():
     parser = argparse.ArgumentParser(description="The Oracle Universal Axiomatic Evaluator")
     parser.add_argument("input_text", nargs="?", help="待评估文本或文件路径")
-    parser.add_argument("--domain", choices=["auto", "copy", "code", "strategy", "skill"], default="auto", help="评估领域")
+    parser.add_argument("--domain", choices=["auto", "copy", "code", "strategy", "skill", "reasoning"], default="auto", help="评估领域")
     parser.add_argument("--before", help="优化前文本或文件路径")
     parser.add_argument("--after", help="优化后文本或文件路径")
     parser.add_argument("--json", action="store_true", help="输出结构化 JSON 数据")

@@ -25,10 +25,16 @@
 
 ---
 
-## 动态路由矩阵对照表 (Routing Decision Matrix - 20 Grand Domains)
+## 动态路由矩阵对照表 (Routing Decision Matrix - 24 Grand Domains)
+
+> **可执行路由引擎**：可直接运行 `python3 scripts/oracle_router.py "你的问题或文件路径" [--top-k 3] [--json]` 获取确定性路由诊断契约。
 
 | 任务输入类型 | 主激活专家 (Weight: 0.6) | 辅激活专家 (Weight: 0.4) | 核心注入的公理 |
 |---|---|---|---|
+| **系统沉疴 / 治标不治本 / 组织干预杠杆** | `system-archetypes` (系统基模与杠杆点) | `complex-systems` (控制论与TOC) | 德内拉·梅多斯12大系统干预杠杆点、圣吉舍本逐末/饮鸩止渴基模、成长上限、目标侵蚀、公地悲剧 |
+| **新品冷启动 / 假设验证 / 技能刻意训练** | `lean-experimentation` (精益实验) | `causality-bayes` (贝叶斯更新) | 多臂老虎机探索-利用权衡 (UCB)、精益MVP构建-测量-学习飞轮、费曼学习法去术语测试、刻意练习心理表征 |
+| **品牌故事 / 演讲脚本 / 极致体验设计** | `narrative-aesthetics` (叙事与峰终美学) | `cognitive-neuro` (三元递质回路) | 坎贝尔英雄之旅与智者导师定位、亚里士多德三幕剧与卡塔西斯净化、蔡加尼克悬念闭合律、卡尼曼峰终定律 |
+| **跨学科降维迁移 / 十年战略 / 元系统自举** | `category-isomorphism` (范畴同构与不变量) | `computation-network` (哥德尔自指) | 范畴论函子同构映射、诺特定理与贝索斯十年战略不变量、韦斯特规模幂律、冯·诺依曼自复制奇异环 |
 | **辩证分析 / 矛盾调和 / 质变相变** | `dialectical-thinking` (辩证思维) | `complex-systems` (控制与演化) | 黑格尔正反合扬弃律 (Aufheben)、三大辩证规律、苏格拉底反诘法、物极必反、玻姆深度汇谈 |
 | **批判性审视 / 严密论证 / 逻辑打假** | `critical-reasoning` (批判性思维) | `logical-razors` (逻辑剃刀) | 保罗-埃尔德8要素与9标准、图尔敏6要素论证骨架、皮尔士溯因法、全量逻辑谬误解构 |
 | **平台伦理 / 契约公平 / 制度正义** | `ethics-social-contract` (伦理契约) | `economics-pareto` (帕累托最优) | 罗尔斯无知之幕、最大最小原则 (Maximin)、康德人是目的公理、正向外部性、道德风险对冲 |

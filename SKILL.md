@@ -55,21 +55,21 @@ flowchart TD
 
 ---
 
-## 门控路由工作流 (Gating Router & Breakthrough Protocol)
+## 门控路由工作流与执行协议 (Gating Router & Execution Protocol)
 
-当接收到技能创建、瓶颈攻坚或系统优化请求时，执行公理级五步破框演绎：
+当触发条件命中（接收到技能创建、瓶颈攻坚或系统优化请求）时，**MUST（必须）** 严格执行以下公理级五步破框核心流程，**NEVER（严格禁止）** 跳过公理推导直接拼贴表面套话：
 
 ```
-[步骤 1: 矛盾解构] → 剥离表面行话与形式主义文字，识别底层物理、博弈与心智矛盾。
+[步骤 1: 矛盾解构] → 剥离表面行话与形式主义文字，调用 scripts/oracle_router.py 识别底层物理、博弈与心智矛盾。
 [步骤 2: 破框审计 (Think Out of the Box)] → 审查九点谜题式隐性人造假设（Assumption Audit），触发 PO 挑衅诱导算子与 TRIZ 四大矛盾分离原理，实现瓦茨拉维克二阶改变（跳出系统本身，重构元规则）。
-[步骤 3: 专家格栅组合] → 激活 Expert Axiom Pool (17 Grand Domains) 中 2~3 个核心专家，调取对应第一性原理与正交升维变量 (Z 轴)。
+[步骤 3: 专家格栅组合] → 激活 Expert Axiom Pool (24 Grand Domains / 120 Mental Models) 中 2~3 个核心专家，调取对应第一性原理与正交升维变量 (Z 轴)。
 [步骤 4: 帕累托推导] → 重塑技能规程，设定“帕累托天平”，坚决拒绝平庸妥协，确保全维度单调不减 (ΔVi >= 0)。
-[步骤 5: 三维红队对抗] → 自动扮演挑刺受众、法务黑客与过度修正仲裁员，封死漏洞，输出可量化验证的免检级交付成果。
+[步骤 5: 三维红队对抗与边界防御] → 自动扮演挑刺受众、法务黑客与过度修正仲裁员，针对边界条件执行防御性异常处理、降级与回滚协议，防范模型幻觉，输出可量化验证的免检级交付成果。
 ```
 
 ---
 
-## 专家池与核心公理索引 (Expert Matrix - 20 Grand Axiomatic Domains)
+## 专家池与核心公理索引 (Expert Matrix - 24 Grand Axiomatic Domains)
 
 | 专家领域 | 适用场景 | 核心第一性原理 | 支撑模块 |
 |---|---|---|---|
@@ -93,16 +93,21 @@ flowchart TD
 | **18. 辩证思维与对立统一扬弃** | 复杂矛盾调和、量变质变相变、系统螺旋演进 | 黑格尔正反合扬弃律 (Aufheben)、三大辩证规律、苏格拉底反诘法、物极必反、戴维·玻姆深度汇谈 | [experts/dialectical-thinking.md](experts/dialectical-thinking.md) |
 | **19. 批判性思维与论证逻辑** | 逻辑打假、论据审计、谬误粉碎、健全论证构建 | 保罗-埃尔德8要素与9标准、图尔敏6要素论证骨架、皮尔士溯因法、全量逻辑谬误解构 | [experts/critical-reasoning.md](experts/critical-reasoning.md) |
 | **20. 伦理契约与罗尔斯正义** | 分润机制公平性、底线民生保障、防范道德风险 | 罗尔斯无知之幕、最大最小公理 (Maximin)、康德人是目的公理、正向外部性福利函数 | [experts/ethics-social-contract.md](experts/ethics-social-contract.md) |
+| **21. 系统基模与干预杠杆点** | 根治组织沉疴、戒除短期止痛药、高杠杆破局 | 德内拉·梅多斯12大系统干预杠杆点、圣吉舍本逐末/饮鸩止渴基模、成长上限、目标侵蚀、公地悲剧 | [experts/system-archetypes.md](experts/system-archetypes.md) |
+| **22. 精益实验与刻意练习** | 新品MVP验证、探索与利用分配、专家心理表征 | 多臂老虎机探索-利用权衡 (UCB)、精益创业构建-测量-学习飞轮、费曼学习法、艾利克森刻意练习与心理表征 | [experts/lean-experimentation.md](experts/lean-experimentation.md) |
+| **23. 叙事动力学与峰终美学** | 品牌故事、爆款脚本、高潮体验设计、悬念留存 | 坎贝尔英雄之旅与智者导师定位、亚里士多德三幕剧与卡塔西斯净化、蔡加尼克悬念效应、卡尼曼峰终定律 | [experts/narrative-aesthetics.md](experts/narrative-aesthetics.md) |
+| **24. 范畴同构与战略不变量** | 跨学科降维迁移、十年战略底座、元系统奇异环自举 | 范畴论函子同构映射、诺特定理与贝索斯十年战略不变量、韦斯特规模法则幂律、冯·诺依曼自复制奇异环 | [experts/category-isomorphism.md](experts/category-isomorphism.md) |
 
 ---
 
-## 帕累托改进铁律 (The Pareto Law)
+## 帕累托改进铁律与边界防线 (The Pareto Law & Boundary Guardrails)
 
-任何经过 The Oracle 优化的技能，必须严格通过 **帕累托合法性检验**：
+任何经过 The Oracle 优化的技能，必须严格通过 **帕累托验证协议与量化评分表断言**：
 
 $$\Delta \text{Skill} \ge 0 \quad (\forall i \in \text{Core Dimensions}: \Delta D_i \ge 0 \quad \land \quad \exists j: \Delta D_j > 0)$$
 
-* **严格禁止负优化**：绝不允许“为了安全而牺牲感染力”、“为了通俗而削弱格局”、“为了性能而毁灭可读性”；
+* **红线禁令（严格禁止负优化）**：绝不允许“为了安全而牺牲感染力”、“为了通俗而削弱格局”、“为了性能而毁灭可读性”；
+* **异常处理与降级回滚**：一旦检测到任一帕累托维度 $\Delta D_i < 0$，立即触发状态回滚与防御性降级，拒绝负向提示污染；
 * **升维破局**：遇到看似不可调和的双重矛盾（如“既要权威，又要亲民”），不准二选一，必须通过**引入更高阶变量（如昂贵信号）推高整个帕累托最优边界 (Pareto Frontier)**！
 
 ---
@@ -113,10 +118,11 @@ $$\Delta \text{Skill} \ge 0 \quad (\forall i \in \text{Core Dimensions}: \Delta 
 * **帕累托仲裁器**：[core/pareto-arbiter.md](core/pareto-arbiter.md)
 * **红队对抗规程**：[core/red-team.md](core/red-team.md)
 * **自指自举进化协议**：[core/bootstrapping.md](core/bootstrapping.md)
+* **可执行门控路由调度器**：[scripts/oracle_router.py](scripts/oracle_router.py)
 * **自动化量化评估引擎**：[scripts/oracle_eval.py](scripts/oracle_eval.py)
 * **公理变异与重构引擎**：[scripts/oracle_mutate.py](scripts/oracle_mutate.py)
 * **递归多代自指进化引擎**：[scripts/oracle_loop.py](scripts/oracle_loop.py)
 * **CI/CD 全自动化回归质检**：[scripts/run_oracle_audit.sh](scripts/run_oracle_audit.sh)
 * **自动化公理单元测试套件**：[tests/test_oracle_engine.py](tests/test_oracle_engine.py)
-* **人类前 100 伟大思维模型与终极理论全景索引**：[references/top-100-mental-models.md](references/top-100-mental-models.md)
+* **人类前 120 伟大思维模型与终极理论全景索引**：[references/top-100-mental-models.md](references/top-100-mental-models.md)
 * **商业文案官方黄金通关标杆**：[benchmarks/case-human-article.md](benchmarks/case-human-article.md)（深度拆解人类历史上从 AI 公文腔到 3 分钟顶流宣传片的跨学科推导全过程）
