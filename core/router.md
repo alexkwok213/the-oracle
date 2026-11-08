@@ -25,10 +25,13 @@
 
 ---
 
-## 动态路由矩阵对照表 (Routing Decision Matrix - 17 Grand Domains)
+## 动态路由矩阵对照表 (Routing Decision Matrix - 20 Grand Domains)
 
 | 任务输入类型 | 主激活专家 (Weight: 0.6) | 辅激活专家 (Weight: 0.4) | 核心注入的公理 |
 |---|---|---|---|
+| **辩证分析 / 矛盾调和 / 质变相变** | `dialectical-thinking` (辩证思维) | `complex-systems` (控制与演化) | 黑格尔正反合扬弃律 (Aufheben)、三大辩证规律、苏格拉底反诘法、物极必反、玻姆深度汇谈 |
+| **批判性审视 / 严密论证 / 逻辑打假** | `critical-reasoning` (批判性思维) | `logical-razors` (逻辑剃刀) | 保罗-埃尔德8要素与9标准、图尔敏6要素论证骨架、皮尔士溯因法、全量逻辑谬误解构 |
+| **平台伦理 / 契约公平 / 制度正义** | `ethics-social-contract` (伦理契约) | `economics-pareto` (帕累托最优) | 罗尔斯无知之幕、最大最小原则 (Maximin)、康德人是目的公理、正向外部性、道德风险对冲 |
 | **破框思考 (Think Out of the Box) / 颠覆创新** | `lateral-breakthrough` (横向思维) | `complex-systems` (二阶改变) | 九点隐性假设粉碎、瓦茨拉维克二阶改变、TRIZ四大矛盾分离、PO挑衅算子、正交升维 |
 | **元认知排查 / 认知偏差 / 避免做蠢事** | `epistemic-latticework` (认知格栅) | `logical-razors` (逻辑剃刀) | 地图不是疆域、查理·芒格25种误判心理学、能力圈边界、局部最优模拟退火跳跃 |
 | **企业宣传 / 招商文案 / 营销脚本** | `game-theory` (昂贵信号) | `semiotics-language` (符号与言语行为) | 扎哈维昂贵信号、奥斯汀言语行为、皮尔斯指示符号、反防御性自证 |

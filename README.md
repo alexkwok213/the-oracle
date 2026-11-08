@@ -32,7 +32,7 @@
 flowchart TD
     User[用户输入: 任何需要优化的技能 / 复杂任务 / 初稿] --> Router[门控路由器 Router: 核心矛盾特征解构]
     
-    subgraph 底层公理专家池 Expert Axiom Pool (17 Grand Domains)
+    subgraph 底层公理专家池 Expert Axiom Pool (20 Grand Domains)
         E1[博弈论与演化专家: 昂贵信号 / 纳什均衡 / 梳毛假说]
         E2[物理与信息论专家: 香农熵减 / 高信噪比 / 复杂度守恒]
         E3[认知与神经科学专家: PKM模型 / 双重编码 / 递质回路]
@@ -50,11 +50,14 @@ flowchart TD
         E15[语言哲学与符号学专家: 维特根斯坦语言游戏 / 言语行为 / 认知隐喻]
         E16[破框思维与TRIZ矛盾分离专家: 九点隐性假设 / 二阶改变 / 矛盾分离 / 正交升维]
         E17[认知格栅与人类误判学专家: 地图不是疆域 / 芒格25种偏见 / 模拟退火跳跃]
+        E18[辩证思维与对立统一专家: 黑格尔正反合扬弃 / 质量互变 / 苏格拉底反诘 / 东方阴阳]
+        E19[批判性思维与论证逻辑专家: 保罗-埃尔德模型 / 图尔敏6要素论证 / 逻辑谬误解构]
+        E20[伦理契约与罗尔斯正义专家: 无知之幕 / 最大最小公理 Maximin / 康德人是目的]
     end
     
-    Router -->|动态加权路由| E1 & E2 & E3 & E4 & E5 & E6 & E7 & E8 & E9 & E10 & E11 & E12 & E13 & E14 & E15 & E16 & E17
+    Router -->|动态加权路由| E1 & E2 & E3 & E4 & E5 & E6 & E7 & E8 & E9 & E10 & E11 & E12 & E13 & E14 & E15 & E16 & E17 & E18 & E19 & E20
     
-    E1 & E2 & E3 & E4 & E5 & E6 & E7 & E8 & E9 & E10 & E11 & E12 & E13 & E14 & E15 & E16 & E17 --> Synthesizer[第一性原理熔铸与解法重构]
+    E1 & E2 & E3 & E4 & E5 & E6 & E7 & E8 & E9 & E10 & E11 & E12 & E13 & E14 & E15 & E16 & E17 & E18 & E19 & E20 --> Synthesizer[第一性原理熔铸与解法重构]
     
     subgraph 质检与自举演化引擎
         Synthesizer --> Pareto[帕累托天平: 零负优化与过度修正仲裁]
@@ -67,9 +70,9 @@ flowchart TD
 
 ---
 
-## 🧠 先知专家池核心公理 (The 17 Grand Expert Domains)
+## 🧠 先知专家池核心公理 (The 20 Grand Expert Domains)
 
-本体系汲取**查理·芒格多元思维模型格栅 (Latticework of Mental Models)** 与全网顶级认知科学精髓，构建了 17 大不可动摇的公理专家池：
+本体系汲取**查理·芒格多元思维模型格栅 (Latticework of Mental Models)** 与全网顶级认知科学精髓，构建了 20 大不可动摇的公理专家池：
 
 | 专家模块 | 第一性原理 | 核心公理推导 | 解决的问题 |
 |---|---|---|---|
@@ -90,6 +93,9 @@ flowchart TD
 | [`experts/semiotics-language.md`](experts/semiotics-language.md) | **语言哲学与认知隐喻** (Semiotics & Language) | 维特根斯坦“语言游戏说”（意义即用法）；奥斯汀言语行为理论（以言行事）；皮尔斯指示符号；概念隐喻 | 沉迷大词黑话、假大空自嗨、无法建立通感 |
 | [`experts/lateral-breakthrough.md`](experts/lateral-breakthrough.md) | **破框思维与TRIZ矛盾分离** (Lateral & Out-of-the-Box) | 九点隐性假设粉碎律；瓦茨拉维克二阶改变（跳出系统本身）；德博诺 PO 挑衅算子；TRIZ四大矛盾分离；正交升维 | 思维撞墙、落入平庸妥协折中、局限在系统内部修补 |
 | [`experts/epistemic-latticework.md`](experts/epistemic-latticework.md) | **认知格栅与人类误判学** (Epistemic Latticework) | 地图不是疆域；查理·芒格25种误判心理学（证实偏见/不一致规避/权威从众）；能力圈边界；模拟退火全局跃迁 | 误判现实、过度自信、被困在局部最优小山丘 |
+| [`experts/dialectical-thinking.md`](experts/dialectical-thinking.md) | **辩证思维与对立统一扬弃** (Dialectical Thinking) | 黑格尔正反合扬弃律 (Aufheben)；对立统一/质量互变/否定之否定三大规律；苏格拉底反诘法；东方阴阳物极必反；戴维·玻姆深度汇谈 | 认知非黑即白死板分裂、不会调和深层矛盾、缺乏战略耐心 |
+| [`experts/critical-reasoning.md`](experts/critical-reasoning.md) | **批判性思维与图尔敏论证** (Critical Reasoning) | 保罗-埃尔德8思维要素与9严苛智力标准；图尔敏论证六要素（主张/数据/保证/支撑/限定/反驳）；皮尔士溯因法；20+逻辑谬误解构 | 逻辑漏洞百出、偷换概念自欺欺人、轻信伪科学谎言 |
+| [`experts/ethics-social-contract.md`](experts/ethics-social-contract.md) | **伦理契约与罗尔斯正义** (Ethics & Social Contract) | 罗尔斯“无知之幕”；最大最小公理 (Maximin)；康德绝对命令（人是目的而非工具）；正外部性社会福利函数；委托代理道德风险对冲 | 掠夺式分润机制、丧失道德合法性、割韭菜引发生态暴雷 |
 
 ---
 
@@ -113,7 +119,7 @@ the-oracle/
 │   ├── pareto-arbiter.md         # 帕累托改进仲裁器
 │   ├── red-team.md               # 三维红队对抗攻击协议
 │   └── bootstrapping.md          # 递归自指自举进化协议
-├── experts/                      # 先知公理专家池 (The 17 Grand Domains)
+├── experts/                      # 先知公理专家池 (The 20 Grand Domains)
 │   ├── game-theory.md            # 博弈论与昂贵信号专家
 │   ├── information-physics.md    # 物理与信息控制论专家
 │   ├── cognitive-neuro.md        # 认知神经科学专家
@@ -130,7 +136,20 @@ the-oracle/
 │   ├── thermodynamics-statistical.md # 热力学、统计物理与遍历性专家
 │   ├── semiotics-language.md     # 语言哲学与认知符号学专家
 │   ├── lateral-breakthrough.md   # 破框思维、横向跳跃与TRIZ矛盾分离专家
-│   └── epistemic-latticework.md  # 认知格栅、元认识论与人类误判学专家
+│   ├── epistemic-latticework.md  # 认知格栅、元认识论与人类误判学专家
+│   ├── dialectical-thinking.md   # 辩证思维与对立统一扬弃专家
+│   ├── critical-reasoning.md     # 批判性思维与图尔敏论证专家
+│   └── ethics-social-contract.md # 伦理契约与罗尔斯正义公理专家
+├── scripts/                      # 自动化确定性工程工具链 (Zero Dependencies)
+│   ├── oracle_eval.py            # 跨领域公理量化评估与帕累托仲裁器 (Copy/Code/Strategy/Skill)
+│   ├── oracle_mutate.py          # 公理级变异与重构算子执行引擎
+│   ├── oracle_loop.py            # 递归多代自指进化收敛引擎 (TOC 瓶颈诊断 + 不动点收敛)
+│   └── run_oracle_audit.sh       # 5 阶段 CI/CD 自动化回归质检流水线
+├── tests/                        # 单元测试套件
+│   └── test_oracle_engine.py     # 9 大跨学科公理单元测试 (100% 通过)
+└── benchmarks/                   # 黄金通关标杆案例
+    └── case-human-article.md     # 商业文案心智重构实战全景
+```
 ├── scripts/                      # 自动化确定性工程工具链 (Zero Dependencies)
 │   ├── oracle_eval.py            # 跨领域公理量化评估与帕累托仲裁器 (Copy/Code/Strategy/Skill)
 │   ├── oracle_mutate.py          # 公理级变异与重构算子执行引擎

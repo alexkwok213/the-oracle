@@ -65,7 +65,7 @@ print(f'✓ 自指递归循环验证通过: 演化代数 {res[\"total_epochs\"]}
 "
 
 # 5. 跨学科专家公理库覆盖完整性扫描
-echo -e "\n[Stage 5/5] 执行 17 大先知专家公理库完整性与格栅扫描..."
+echo -e "\n[Stage 5/5] 执行 20 大先知专家公理库完整性与格栅扫描..."
 EXPERT_COUNT=$(ls experts/*.md | wc -l | tr -d ' ')
 echo "✓ 已加载先知公理专家数量: $EXPERT_COUNT 个专家模块"
 for exp in experts/*.md; do

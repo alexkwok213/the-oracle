@@ -69,7 +69,7 @@ flowchart TD
 
 ---
 
-## 专家池与核心公理索引 (Expert Matrix - 17 Grand Axiomatic Domains)
+## 专家池与核心公理索引 (Expert Matrix - 20 Grand Axiomatic Domains)
 
 | 专家领域 | 适用场景 | 核心第一性原理 | 支撑模块 |
 |---|---|---|---|
@@ -90,6 +90,9 @@ flowchart TD
 | **15. 语言哲学与符号认知** | 黑话洗净、概念普及、信任穿透、情感通感 | 维特根斯坦语言游戏说、奥斯汀言语行为理论、皮尔斯符号三元组、身体化隐喻 | [experts/semiotics-language.md](experts/semiotics-language.md) |
 | **16. 破框思维与TRIZ矛盾分离** | 破除盒界、颠覆创新、消除妥协、横向破局 | 九点隐性假设粉碎律、瓦茨拉维克二阶改变、德博诺 PO 挑衅算子、TRIZ 四大矛盾分离、正交升维 | [experts/lateral-breakthrough.md](experts/lateral-breakthrough.md) |
 | **17. 认知格栅与人类误判学** | 盲区排查、战略清醒、元认识论、避免愚蠢 | 地图不是疆域、查理·芒格 25 种误判心理学、能力圈边界、模拟退火全局跳跃 | [experts/epistemic-latticework.md](experts/epistemic-latticework.md) |
+| **18. 辩证思维与对立统一扬弃** | 复杂矛盾调和、量变质变相变、系统螺旋演进 | 黑格尔正反合扬弃律 (Aufheben)、三大辩证规律、苏格拉底反诘法、物极必反、戴维·玻姆深度汇谈 | [experts/dialectical-thinking.md](experts/dialectical-thinking.md) |
+| **19. 批判性思维与论证逻辑** | 逻辑打假、论据审计、谬误粉碎、健全论证构建 | 保罗-埃尔德8要素与9标准、图尔敏6要素论证骨架、皮尔士溯因法、全量逻辑谬误解构 | [experts/critical-reasoning.md](experts/critical-reasoning.md) |
+| **20. 伦理契约与罗尔斯正义** | 分润机制公平性、底线民生保障、防范道德风险 | 罗尔斯无知之幕、最大最小公理 (Maximin)、康德人是目的公理、正向外部性福利函数 | [experts/ethics-social-contract.md](experts/ethics-social-contract.md) |
 
 ---
 
