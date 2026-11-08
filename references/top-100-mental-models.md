@@ -1,8 +1,8 @@
-# 人类前 120 伟大思维模型与终极理论全景索引
-# (The Top 120 Mental Models & Grand Theories of Humanity)
+# 人类前 150 伟大思维模型与终极理论全景索引
+# (The Top 150 Mental Models & Grand Theories of Humanity)
 
 > **“在你的头脑里必须拥有一张思维模型的网格（A Latticework of Mental Models），你必须将你的经验悬挂在上面。” —— 查理·芒格 (Charlie Munger)**  
-> **“掌握了这 80 到 100+ 个核心思维模型，就能承载 95% 的重力，让你成为一个拥有普世智慧的人。” —— 彼得·贝弗林《探索智慧：从达尔文到芒格》**
+> **“掌握了这 100+ 个核心思维模型，就能承载 99% 的重力，让你成为一个拥有普世智慧的人。” —— 彼得·贝弗林《探索智慧：从达尔文到芒格》**
 
 ---
 
@@ -20,6 +20,9 @@
 * [第十章：博弈、大战略与伦理契约 (91 - 100)](#第十章博弈大战略与伦理契约-91---100)
 * [第十一章：系统基模、干预杠杆与精益实验 (101 - 110)](#第十一章系统基模干预杠杆与精益实验-101---110)
 * [第十二章：叙事美学、范畴同构与终极元定理 (111 - 120)](#第十二章叙事美学范畴同构与终极元定理-111---120)
+* [第十三章：东方古典兵学、道家演化与阳明心学 (121 - 130)](#第十三章东方古典兵学道家演化与阳明心学-121---130)
+* [第十四章：量子认识论、制度经济与组织拓扑 (131 - 140)](#第十四章量子认识论制度经济与组织拓扑-131---140)
+* [第十五章：模因免疫、交互物理与范式革命 (141 - 150)](#第十五章模因免疫交互物理与范式革命-141---150)
 
 ---
 
@@ -227,12 +230,63 @@
 
 ---
 
-## 🧭 总结：The Oracle 如何调用人类前 120 伟大理论？
+## 第十三章：东方古典兵学、道家演化与阳明心学 (121 - 130)
 
-这 **120 大伟大思维模型**，正是 The Oracle 的认知母体。
-它们不是 120 张孤立的卡片，而是像**化学元素周期表**一样，通过 **24 大先知公理专家池（The 24 Grand Domains）** 与 **门控路由器（Router & `scripts/oracle_router.py`）** 动态咬合：
+| 编号 | 思维模型 (中英文) | 奠基人 / 来源 | 第一性原理极简表述 | The Oracle 承载专家模块 |
+|:---:|---|---|---|:---:|
+| **121** | **先胜而后求战 (Winning Before Fighting)** | 孙武《孙子兵法·形篇》 | “胜兵先胜而后求战，败兵先战而后求胜。” 赢家在出手前已靠结构性筹码锁死胜局，绝不靠开战后赌运气。 | [`experts/eastern-strategy-philosophy.md`](../experts/eastern-strategy-philosophy.md) |
+| **122** | **致人而不致于人 (Shaping the Asymmetric Field)** | 孙武《孙子兵法·虚实篇》 | 绝不在对手设定的存量血海里被动接招，而是重构利益磁场与战场规则，让对手和受众主动向我方主场靠拢。 | [`experts/eastern-strategy-philosophy.md`](../experts/eastern-strategy-philosophy.md) |
+| **123** | **避实击虚与兵形象水 (Fluidity: Striking Vacuities)** | 孙武《孙子兵法·虚实篇》 | 水从不硬撞石头，而是顺缝隙流向阻力最小的真空；避开竞品锋芒与受众心理防备，直击未被满足的情感真空。 | [`experts/eastern-strategy-philosophy.md`](../experts/eastern-strategy-philosophy.md) |
+| **124** | **以正合，以奇胜 (Orthogonal Qi-Zheng Dynamics)** | 孙武《孙子兵法·势篇》 | 70% 的“正”（合规、制药级品控、代码鲁棒性）确保立于不败之地；30% 的“奇”（破框钩子、升维隐喻）实现一击穿透。 | [`experts/eastern-strategy-philosophy.md`](../experts/eastern-strategy-philosophy.md) |
+| **125** | **善战者无赫赫之功 (Effortless Mastery)** | 孙武《孙子兵法·形篇》 | 真正免检级的作品与架构看起来平实自然、毫无惊险花哨，因为所有致命雷区早在动笔前已被悄然排空。 | [`experts/eastern-strategy-philosophy.md`](../experts/eastern-strategy-philosophy.md) |
+| **126** | **反者道之动，弱者道之用 (Daoist Polarity Reversal)** | 老子《道德经》 | 越是声嘶力竭自夸“全网第一”的强梁者越显心虚；克制谦逊、水利万物而不争的客观白描，反而赢得最高信任。 | [`experts/eastern-strategy-philosophy.md`](../experts/eastern-strategy-philosophy.md) |
+| **127** | **无为而无不为与大制不割 (Wu-Wei Self-Organization)** | 老子《道德经》 | 最高级的系统治理不靠繁琐死板的微观折腾，而是设定极简底层公理后让生态自发涌现秩序，保持系统有机整体性。 | [`experts/eastern-strategy-philosophy.md`](../experts/eastern-strategy-philosophy.md) |
+| **128** | **知行合一 (Unity of Knowledge and Action)** | 王阳明《传习录》 | “知是行的主意，行是知的功夫。” 任何不能转化为确定性代码算子或可执行动作的理论，都是假知与空谈。 | [`experts/eastern-strategy-philosophy.md`](../experts/eastern-strategy-philosophy.md) |
+| **129** | **事上磨练与致良知 (Empirical Grinding in Reality)** | 王阳明心学 | 脱离真实红队压力与商业战场的温室方案必死；必须在真刀真枪的极端边界对抗中磨炼心性与系统鲁棒性。 | [`experts/eastern-strategy-philosophy.md`](../experts/eastern-strategy-philosophy.md) |
+| **130** | **转圆石于千仞之山 (Gravitational Potential Momentum)** | 孙武《孙子兵法·势篇》 | 善战者求之于势，不责于人；把时代趋势与硬核工业底盘垫高成千仞之山，让转化成为顺势滚落的自然结果。 | [`experts/eastern-strategy-philosophy.md`](../experts/eastern-strategy-philosophy.md) |
+
+---
+
+## 第十四章：量子认识论、制度经济与组织拓扑 (131 - 140)
+
+| 编号 | 思维模型 (中英文) | 奠基人 / 来源 | 第一性原理极简表述 | The Oracle 承载专家模块 |
+|:---:|---|---|---|:---:|
+| **131** | **海森堡测不准与观察者效应 (Observer Effect)** | 海森堡 / 量子力学 | 观测行为本身必然干扰被观测对象；传统问卷访谈会触发受众印象管理而失真，唯有无感行为与真金白银交易能测准本能。 | [`experts/quantum-epistemology.md`](../experts/quantum-epistemology.md) |
+| **132** | **玻尔互补原理与波粒二象性 (Complementarity Principle)** | 尼尔斯·玻尔 | 顶级作品必须兼具“粒子性”（离散坚硬的数字铁证与代码节点）与“波动性”（连续流动的声律节奏与情绪共鸣）。 | [`experts/quantum-epistemology.md`](../experts/quantum-epistemology.md) |
+| **133** | **薛定谔战略叠加态与延迟坍缩 (Strategic Superposition)** | 薛定谔 / 量子决策学 | 在信息匮乏早期拒绝过早赌死单一路径，保持多条低成本正交假说叠加并行，待实证测量出现后再坍缩聚焦。 | [`experts/quantum-epistemology.md`](../experts/quantum-epistemology.md) |
+| **134** | **费曼路径积分与相长干涉 (Path Integral & Interference)** | 理查德·费曼 | 系统演化是所有路径相位的叠加；砍掉一切偏离主旨引发相消干涉的冗余枝节，使全篇每一句话相位对齐共振。 | [`experts/quantum-epistemology.md`](../experts/quantum-epistemology.md) |
+| **135** | **科斯定理与交易成本边界 (Coase Theorem & Transaction Costs)** | 罗纳德·科斯 | 平台与企业存在的唯一理由是抹平市场高昂的搜寻、鉴别、签约与履约摩擦成本，将复杂留在内部，把简单交给个体。 | [`experts/institutional-governance.md`](../experts/institutional-governance.md) |
+| **136** | **诺斯制度路径依赖与锁定破解 (Institutional Path Dependence)** | 道格拉斯·诺斯 | 历史惯性与既得利益会将系统锁死在低效旧轨；破局不能靠口头劝说，必须重构底层激励契约与默认工具流。 | [`experts/institutional-governance.md`](../experts/institutional-governance.md) |
+| **137** | **奥斯特罗姆自主治理八原则 (Ostrom's 8 Commons Principles)** | 埃莉诺·奥斯特罗姆 | 通过清晰准入边界、透明监督与分级累进制裁（Graduated Sanctions），在不搞一刀切死锁的前提下根治公地悲剧。 | [`experts/institutional-governance.md`](../experts/institutional-governance.md) |
+| **138** | **康威定律与逆康威操作 (Conway's Law & Inverse Maneuver)** | 梅尔文·康威 | 组织沟通结构决定系统架构形态；要想获得高内聚低耦合的稀疏正交系统，必须先按目标架构切分专家职责边界。 | [`experts/institutional-governance.md`](../experts/institutional-governance.md) |
+| **139** | **森托拉复杂传染与宽桥定律 (Complex Contagion & Wide Bridges)** | 达蒙·森托拉 | 八卦靠弱连接窄桥传播，但高门槛信任与行为改变必须靠同圈层多节点的交叉验证（宽桥强化）才能跨越采纳阈值。 | [`experts/epidemiology-memetics.md`](../experts/epidemiology-memetics.md) |
+| **140** | **基本再生数 $R_0$ 病毒裂变公式 (Viral Reproduction $R_0 = \beta c d$)** | 流行病学 SIR 模型 | 唯有当单次穿透率 $\beta \times$ 社交触达率 $c \times$ 内容半衰期 $d > 1$ 时，信息才能发生超临界链式裂变。 | [`experts/epidemiology-memetics.md`](../experts/epidemiology-memetics.md) |
+
+---
+
+## 第十五章：模因免疫、交互物理与范式革命 (141 - 150)
+
+| 编号 | 思维模型 (中英文) | 奠基人 / 来源 | 第一性原理极简表述 | The Oracle 承载专家模块 |
+|:---:|---|---|---|:---:|
+| **141** | **道金斯模因论三定律 (Dawkins' Memetics)** | 理查德·道金斯 | 顶级文化模因必须同时具备高复制保真度（一句话听懂能转述）、高繁殖力（社交货币）与长持久度（锚定人性刚需）。 | [`experts/epidemiology-memetics.md`](../experts/epidemiology-memetics.md) |
+| **142** | **麦圭尔心理免疫接种理论 (Psychological Inoculation)** | 威廉·麦圭尔 | 主动在文案中暴露弱化版常见质疑并当场用铁证拆解（打认知疫苗），能使受众对外部黑公关产生终身心理抗体。 | [`experts/epidemiology-memetics.md`](../experts/epidemiology-memetics.md) |
+| **143** | **希克-海曼决策熵定律 (Hick-Hyman Law)** | 威廉·希克 / 雷·海曼 | $T = b \log_2(n+1)$；选项越多决策越瘫痪。永远替用户砍掉多余分支，只给出一道最清晰的黄金行动号召（Single CTA）。 | [`experts/design-aesthetics-physics.md`](../experts/design-aesthetics-physics.md) |
+| **144** | **菲茨可达性物理定律 (Fitts's Law)** | 保罗·菲茨 | $MT = a + b \log_2(2D/W)$；极力缩短从心动到行动的操作距离 $D$，极力拓宽入口容错宽度 $W$。 | [`experts/design-aesthetics-physics.md`](../experts/design-aesthetics-physics.md) |
+| **145** | **拉姆斯“少即更好”极简十诫 (Less, But Better)** | 迪特·拉姆斯 | 极简不是简陋，而是剔除一切无承重功能的装饰性冗余，让剩下的每一字、每一行代码都发挥最大结构力学价值。 | [`experts/design-aesthetics-physics.md`](../experts/design-aesthetics-physics.md) |
+| **146** | **罗维 MAYA 原理与留白负熵律 (MAYA & Negative Space)** | 雷蒙德·罗维 / 东方美学 | “最先进但仍可被接受”——用最熟悉的温暖壳子包裹最前沿的硬核科技；高潮金句后必须留出听觉留白让余音共振。 | [`experts/design-aesthetics-physics.md`](../experts/design-aesthetics-physics.md) |
+| **147** | **库恩范式转移与不可通约性 (Kuhn's Paradigm Shift)** | 托马斯·库恩 | 在旧范式里把马车轮子造得再圆也造不出汽车；当反常累积引发危机时，必须直接切换底层公理坐标系完成范式革命。 | [`experts/paradigm-revolutions.md`](../experts/paradigm-revolutions.md) |
+| **148** | **拉卡托斯硬核与保护带纲领 (Hard Core & Protective Belt)** | 伊姆雷·拉卡托斯 | 死守不可妥协的第一性原理“硬核”，通过灵活重构外围话术与策略“保护带”吸收外部冲击，打造进步研究纲领。 | [`experts/paradigm-revolutions.md`](../experts/paradigm-revolutions.md) |
+| **149** | **熊彼特创造性破坏 (Schumpeter's Creative Destruction)** | 约瑟夫·熊彼特 | 真正的增长绝非存量微调，而是从内部打碎旧均衡、引入跨学科新组合的创造性突变。 | [`experts/paradigm-revolutions.md`](../experts/paradigm-revolutions.md) |
+| **150** | **彼得·蒂尔从 0 到 1 与反共识秘密 (Zero-to-One & Contrarian Secret)** | 彼得·蒂尔 | 拒绝从 1 到 $n$ 的水平模仿；开篇必须亮出一个“同行 99% 抱持流俗偏见、而有第一性原理铁证支撑”的反共识秘密。 | [`experts/paradigm-revolutions.md`](../experts/paradigm-revolutions.md) |
+
+---
+
+## 🧭 总结：The Oracle 如何调用人类前 150 伟大理论？
+
+这 **150 大伟大思维模型**，正是 The Oracle v3.0 的认知母体。
+它们不是 150 张孤立的卡片，而是像**化学元素周期表**一样，通过 **30 大先知公理专家池（The 30 Grand Domains）** 与 **门控路由器（Router & `scripts/oracle_router.py`）** 动态咬合：
 
 1. **输入阶段**：Router 通过“三问法则”解构问题本质；
 2. **调度阶段**：根据问题性质，自动激活 2~3 个承载了对应思维模型的 Expert 模块；
-3. **推导阶段**：运用第一性原理、破框思维（TRIZ/二阶改变）、系统干预杠杆与辩证法扬弃，推动帕累托最优边界（$\Delta V_i \ge 0$）；
-4. **输出阶段**：经图尔敏论证与红队对抗审计，输出无可辩驳的免检级交付物。
+3. **推导阶段**：运用第一性原理、破框思维（TRIZ/二阶改变）、系统干预杠杆、东方奇正兵学与辩证法扬弃，推动帕累托最优边界（$\Delta V_i \ge 0$）；
+4. **输出阶段**：经图尔敏论证、反古德哈特审计与可执行三维红队对抗（`scripts/oracle_redteam.py`），输出无可辩驳的免检级交付物。

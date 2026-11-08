@@ -280,7 +280,9 @@ SKILL_AXIOMATIC_PATTERNS = [
     r"盖尔定律", r"约束理论", r"二阶思维", r"奥卡姆剃刀", r"珀尔因果", r"反脆弱",
     r"破框", r"横向思维", r"二阶改变", r"TRIZ", r"最终理想解", r"隐性假设", r"正交升维",
     r"辩证", r"黑格尔", r"正反合", r"扬弃", r"批判性思维", r"图尔敏", r"无知之幕", r"人是目的", r"保罗-埃尔德",
-    r"系统基模", r"杠杆点", r"峰终定律", r"英雄之旅", r"蔡加尼克", r"范畴论", r"同构", r"战略不变量", r"费曼", r"心理表征"
+    r"系统基模", r"杠杆点", r"峰终定律", r"英雄之旅", r"蔡加尼克", r"范畴论", r"同构", r"战略不变量", r"费曼", r"心理表征",
+    r"孙子兵法", r"避实击虚", r"反者道之动", r"知行合一", r"观察者效应", r"波粒二象性", r"叠加态",
+    r"科斯定理", r"交易成本", r"康威定律", r"模因", r"心理免疫", r"希克定律", r"菲茨定律", r"范式转移", r"创造性破坏", r"从0到1"
 ]
 
 class SkillEvaluator:
@@ -288,12 +290,18 @@ class SkillEvaluator:
         self.text = text.strip()
 
     def evaluate(self) -> Dict[str, Any]:
-        """基于认知控制论与软件工程公理评估 Agent 技能架构质量"""
+        """基于认知控制论、软件工程公理与古德哈特反作弊定律评估 Agent 技能架构质量"""
         directives = [m for p in SKILL_DIRECTIVE_PATTERNS for m in re.findall(p, self.text)]
         vagues = [m for p in SKILL_VAGUE_PATTERNS for m in re.findall(p, self.text)]
         boundaries = [m for p in SKILL_BOUNDARY_PATTERNS for m in re.findall(p, self.text)]
         verifications = [m for p in SKILL_VERIFICATION_PATTERNS for m in re.findall(p, self.text)]
         axioms = [m for p in SKILL_AXIOMATIC_PATTERNS for m in re.findall(p, self.text)]
+
+        # 古德哈特反作弊检测 (Anti-Goodhart Keyword Stuffing Counter-Metric)
+        non_empty_lines = [l.strip() for l in self.text.split('\n') if l.strip()]
+        has_markdown_sections = bool(re.search(r'^##\s+', self.text, re.M))
+        is_keyword_stuffing = (len(axioms) >= 5) and (len(non_empty_lines) <= 4 or not has_markdown_sections)
+        goodhart_penalty = 55 if is_keyword_stuffing else 0
 
         # 1. 明确性与指令密度 (Directive Density & SNR)
         directive_score = min(100, max(20, 50 + len(directives)*5 - len(vagues)*15))
@@ -304,8 +312,9 @@ class SkillEvaluator:
         # 3. 验收标准与验证严格度 (Verification Rigor)
         verif_score = min(100, max(20, 30 + len(verifications)*10))
 
-        # 4. 底层公理深度与理论支撑 (Axiomatic Grounding)
-        axiom_score = min(100, max(20, 30 + len(axioms)*10))
+        # 4. 底层公理深度与理论支撑 (Axiomatic Grounding - Anti-Goodhart Protected)
+        base_axiom = min(100, max(20, 30 + len(axioms)*10))
+        axiom_score = max(15, base_axiom - goodhart_penalty)
 
         v = {
             "directive_density": directive_score,
@@ -324,7 +333,8 @@ class SkillEvaluator:
                 "vague_phrases": list(set(vagues)),
                 "boundary_rules_count": len(boundaries),
                 "verification_checks_count": len(verifications),
-                "axiom_citations": list(set(axioms))
+                "axiom_citations": list(set(axioms)),
+                "goodhart_stuffing_detected": is_keyword_stuffing
             }
         }
 

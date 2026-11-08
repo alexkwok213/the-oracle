@@ -192,18 +192,55 @@ name: the-oracle
         arb = arbitrate_pareto(ev_bad, ev_good)
         self.assertTrue(arb["is_pareto_improvement"])
 
-    def test_executable_router_24_domains(self):
-        """测试可执行门控路由器 (24 大公理专家领域 & 120 思维模型索引)"""
+    def test_executable_router_30_domains_150_models(self):
+        """测试可执行门控路由器 (30 大公理专家领域 & 150 思维模型索引)"""
         from oracle_router import route_task, EXPERT_DOMAINS
-        self.assertEqual(len(EXPERT_DOMAINS), 24)
+        self.assertEqual(len(EXPERT_DOMAINS), 30)
 
-        res = route_task("如何用破框思维TRIZ和黑格尔辩证法正反合解决产品既要高权威又要接地气的矛盾？", top_k=3)
+        res = route_task("如何用孙子兵法避实击虚、量子观察者效应和科斯交易成本解决平台增长瓶颈？", top_k=3)
         diag = res["router_diagnosis"]
-        self.assertEqual(diag["total_expert_pool_size"], 24)
-        self.assertEqual(diag["total_mental_models_indexed"], 120)
+        self.assertEqual(diag["total_expert_pool_size"], 30)
+        self.assertEqual(diag["total_mental_models_indexed"], 150)
         slugs = [e["slug"] for e in diag["selected_experts"]]
-        self.assertIn("lateral-breakthrough", slugs)
-        self.assertIn("dialectical-thinking", slugs)
+        self.assertTrue(any(s in slugs for s in ["eastern-strategy-philosophy", "quantum-epistemology", "institutional-governance"]))
+
+    def test_anti_goodhart_keyword_stuffing(self):
+        """测试反古德哈特堆砌作弊保护律 (#106): 仅堆砌公理名词而无结构推导将被重罚"""
+        fake_stuffed_skill = "第一性原理 香农 纳什 扎哈维 盖尔定律 约束理论 珀尔因果 反脆弱"
+        ev = evaluate_universal(fake_stuffed_skill, domain="skill")
+        self.assertTrue(ev["details"]["goodhart_stuffing_detected"])
+        self.assertLessEqual(ev["pareto_vector"]["axiomatic_grounding"], 55)
+
+    def test_3d_red_team_adversary(self):
+        """测试可执行三维红队对抗攻击引擎 (Skeptic / Bug Hunter / Anti-Blandness)"""
+        from oracle_redteam import RedTeamAdversary
+        dirty_ad = "我们的初心很纯粹，保证稳赚不赔！货源你不用操心，我们全程兜底！"
+        rep_bad = RedTeamAdversary(dirty_ad, domain="copy").run_full_redteam()
+        self.assertFalse(rep_bad["passed_redteam"])
+        self.assertGreater(rep_bad["critical_vulnerabilities"], 0)
+        self.assertLess(rep_bad["survival_score"], 60.0)
+
+        clean_robust = (
+            "全国心脑血管患病人数已突破 3.3 亿，长寿时代活得健康成了刚需。"
+            "依托深厚医药工业根基与国家特医食品批文，每一批产品经过严苛检验。"
+            "我们把复杂留给系统，把简单交还个体创业者，携手稳健深耕大健康市场。"
+        )
+        rep_good = RedTeamAdversary(clean_robust, domain="copy").run_full_redteam()
+        self.assertEqual(rep_good["critical_vulnerabilities"], 0)
+        self.assertGreaterEqual(rep_good["survival_score"], 80.0)
+
+    def test_compiler_repo_self_audit(self):
+        """测试 v3.0 全链路编译器自带的哥德尔全仓自指健康度扫描"""
+        from oracle_compiler import audit_oracle_repository
+        repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+        rep = audit_oracle_repository(repo_root)
+        self.assertEqual(rep["experts_on_disk"], 30)
+        self.assertEqual(rep["experts_in_router"], 30)
+        self.assertEqual(rep["mental_models_indexed"], 150)
+        self.assertEqual(len(rep["missing_expert_files"]), 0)
+        self.assertEqual(rep["skill_md_composite_score"], 100.0)
+        self.assertTrue(rep["skill_md_redteam_passed"])
+        self.assertTrue(rep["repository_healthy"])
 
     def test_multi_epoch_skill_toc_evolution(self):
         """测试元技能在 TOC 瓶颈驱动下的逐代演化 (Epochs 0 -> 1 -> 2 -> 3 -> 4)"""

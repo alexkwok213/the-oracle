@@ -25,12 +25,18 @@
 
 ---
 
-## 动态路由矩阵对照表 (Routing Decision Matrix - 24 Grand Domains)
+## 动态路由矩阵对照表 (Routing Decision Matrix - 30 Grand Domains)
 
-> **可执行路由引擎**：可直接运行 `python3 scripts/oracle_router.py "你的问题或文件路径" [--top-k 3] [--json]` 获取确定性路由诊断契约。
+> **可执行路由引擎**：可直接运行 `python3 scripts/oracle_router.py "你的问题或文件路径" [--top-k 3] [--json]` 获取确定性路由诊断契约（覆盖 30 大先知公理领域与 150 大人类伟大思维模型）。
 
 | 任务输入类型 | 主激活专家 (Weight: 0.6) | 辅激活专家 (Weight: 0.4) | 核心注入的公理 |
 |---|---|---|---|
+| **东方兵学布局 / 势能塑造 / 知行合一** | `eastern-strategy-philosophy` (东方古典兵学与心学) | `strategy-ooda` (动态博弈) | 《孙子兵法》先胜而后求战、致人而不致于人、避实击虚、奇正相生、老子反者道之动、王阳明知行合一 |
+| **用户调研防失真 / 多路径并行探索** | `quantum-epistemology` (量子认识论) | `causality-bayes` (贝叶斯更新) | 海森堡测不准与观察者效应、玻尔波粒二象互补原理、薛定谔战略叠加态与延迟坍缩、费曼路径积分 |
+| **平台交易摩擦消除 / 组织架构解耦** | `institutional-governance` (制度经济与康威定律) | `economics-pareto` (帕累托最优) | 科斯定理与交易成本边界、诺斯制度路径依赖破解、奥斯特罗姆自主治理8原则、康威定律与逆康威操作 |
+| **病毒级裂变传播 / 防黑公关心理疫苗** | `epidemiology-memetics` (流行病与模因免疫) | `computation-network` (无标度网络) | 基本再生数 $R_0 = \beta c d$、道金斯模因三定律、麦圭尔心理免疫接种理论、森托拉复杂传染宽桥定律 |
+| **交互漏斗提效 / 极简留白美学** | `design-aesthetics-physics` (认知工效与极简美学) | `narrative-aesthetics` (峰终美学) | 希克定律（单一CTA）、菲茨可达性定律、迪特·拉姆斯极简十诫、罗维MAYA原理与东方留白负熵律 |
+| **颠覆性品类开创 / 从0到1反共识破局** | `paradigm-revolutions` (科学革命与范式转移) | `lateral-breakthrough` (破框思维) | 库恩范式转移与不可通约性、拉卡托斯硬核与保护带纲领、熊彼特创造性破坏、彼得·蒂尔从0到1反共识秘密 |
 | **系统沉疴 / 治标不治本 / 组织干预杠杆** | `system-archetypes` (系统基模与杠杆点) | `complex-systems` (控制论与TOC) | 德内拉·梅多斯12大系统干预杠杆点、圣吉舍本逐末/饮鸩止渴基模、成长上限、目标侵蚀、公地悲剧 |
 | **新品冷启动 / 假设验证 / 技能刻意训练** | `lean-experimentation` (精益实验) | `causality-bayes` (贝叶斯更新) | 多臂老虎机探索-利用权衡 (UCB)、精益MVP构建-测量-学习飞轮、费曼学习法去术语测试、刻意练习心理表征 |
 | **品牌故事 / 演讲脚本 / 极致体验设计** | `narrative-aesthetics` (叙事与峰终美学) | `cognitive-neuro` (三元递质回路) | 坎贝尔英雄之旅与智者导师定位、亚里士多德三幕剧与卡塔西斯净化、蔡加尼克悬念闭合律、卡尼曼峰终定律 |

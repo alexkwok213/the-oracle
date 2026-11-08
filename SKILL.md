@@ -62,14 +62,14 @@ flowchart TD
 ```
 [步骤 1: 矛盾解构] → 剥离表面行话与形式主义文字，调用 scripts/oracle_router.py 识别底层物理、博弈与心智矛盾。
 [步骤 2: 破框审计 (Think Out of the Box)] → 审查九点谜题式隐性人造假设（Assumption Audit），触发 PO 挑衅诱导算子与 TRIZ 四大矛盾分离原理，实现瓦茨拉维克二阶改变（跳出系统本身，重构元规则）。
-[步骤 3: 专家格栅组合] → 激活 Expert Axiom Pool (24 Grand Domains / 120 Mental Models) 中 2~3 个核心专家，调取对应第一性原理与正交升维变量 (Z 轴)。
+[步骤 3: 专家格栅组合] → 激活 Expert Axiom Pool (30 Grand Domains / 150 Mental Models) 中 2~3 个核心专家，调取对应第一性原理与正交升维变量 (Z 轴)。
 [步骤 4: 帕累托推导] → 重塑技能规程，设定“帕累托天平”，坚决拒绝平庸妥协，确保全维度单调不减 (ΔVi >= 0)。
-[步骤 5: 三维红队对抗与边界防御] → 自动扮演挑刺受众、法务黑客与过度修正仲裁员，针对边界条件执行防御性异常处理、降级与回滚协议，防范模型幻觉，输出可量化验证的免检级交付成果。
+[步骤 5: 三维红队对抗与边界防御] → 自动调用 scripts/oracle_redteam.py 扮演挑刺受众、法务黑客与过度修正仲裁员，针对边界条件执行防御性异常处理、降级与回滚协议，防范模型幻觉，输出可量化验证的免检级交付成果。
 ```
 
 ---
 
-## 专家池与核心公理索引 (Expert Matrix - 24 Grand Axiomatic Domains)
+## 专家池与核心公理索引 (Expert Matrix - 30 Grand Axiomatic Domains)
 
 | 专家领域 | 适用场景 | 核心第一性原理 | 支撑模块 |
 |---|---|---|---|
@@ -78,7 +78,7 @@ flowchart TD
 | **3. 认知与神经生物学** | 表达人话、用户体验、注意力锁定、决策驱动 | 说服知识模型 (PKM)、双重编码理论、三元递质回路 (皮质醇/催产素/多巴胺) | [experts/cognitive-neuro.md](experts/cognitive-neuro.md) |
 | **4. 微观经济学与运筹学** | 商业模式、激励机制、帕累托改进、护城河 | 帕累托前沿外推、机会成本第一定律、边际成本递减、巴菲特经济护城河 | [experts/economics-pareto.md](experts/economics-pareto.md) |
 | **5. 演化生物学与生态位** | 差异化定位、生态竞争、团队文化、部落共鸣 | 敦巴声波梳毛假说、互惠利他同盟、红皇后效应、高斯生态位隔离 | [experts/evolutionary-social.md](experts/evolutionary-social.md) |
-| **6. 复杂系统与控制论** | 系统架构、组织演进、抗雪崩、长期闭环 | 盖尔定律、正负反馈回路、二阶思维 (And then what?)、约束理论瓶颈律 | [experts/complex-systems.md](experts/complex-systems.md) |
+| **6. 复杂系统与控制论** | 系统架构、组织演进、抗雪崩、长期内稳态 | 盖尔定律、正负反馈回路、二阶思维 (And then what?)、约束理论瓶颈律 | [experts/complex-systems.md](experts/complex-systems.md) |
 | **7. 逻辑剃刀与芒格心智** | 盲区排查、重大战略决策、去伪存真、红队攻防 | 芒格逆向思维、洛拉帕卢扎效应、激励超级反应、哲学四大终极剃刀 | [experts/logical-razors.md](experts/logical-razors.md) |
 | **8. 因果革命与贝叶斯理性** | 数据归因、功效验证、反安慰剂、打破怀疑先验 | 珀尔因果梯三层模型、混杂因子隔离、后此谬误防范、贝叶斯先验似然比 | [experts/causality-bayes.md](experts/causality-bayes.md) |
 | **9. 反脆弱性与机制安全** | 制度设计、抗黑天鹅、防投机刷单、团队裂变 | 塔勒布凸性效应 (不对称收益)、肌肤之亲公理 (Skin in the Game)、拜占庭容错 | [experts/antifragility-security.md](experts/antifragility-security.md) |
@@ -93,10 +93,16 @@ flowchart TD
 | **18. 辩证思维与对立统一扬弃** | 复杂矛盾调和、量变质变相变、系统螺旋演进 | 黑格尔正反合扬弃律 (Aufheben)、三大辩证规律、苏格拉底反诘法、物极必反、戴维·玻姆深度汇谈 | [experts/dialectical-thinking.md](experts/dialectical-thinking.md) |
 | **19. 批判性思维与论证逻辑** | 逻辑打假、论据审计、谬误粉碎、健全论证构建 | 保罗-埃尔德8要素与9标准、图尔敏6要素论证骨架、皮尔士溯因法、全量逻辑谬误解构 | [experts/critical-reasoning.md](experts/critical-reasoning.md) |
 | **20. 伦理契约与罗尔斯正义** | 分润机制公平性、底线民生保障、防范道德风险 | 罗尔斯无知之幕、最大最小公理 (Maximin)、康德人是目的公理、正向外部性福利函数 | [experts/ethics-social-contract.md](experts/ethics-social-contract.md) |
-| **21. 系统基模与干预杠杆点** | 根治组织沉疴、戒除短期止痛药、高杠杆破局 | 德内拉·梅多斯12大系统干预杠杆点、圣吉舍本逐末/饮鸩止渴基模、成长上限、目标侵蚀、公地悲剧 | [experts/system-archetypes.md](experts/system-archetypes.md) |
+| **21. 系统基模与干预杠杆点** | 化解系统顽疾、戒除短期止痛药、高杠杆破局 | 德内拉·梅多斯12大系统干预杠杆点、圣吉舍本逐末/饮鸩止渴基模、成长上限、目标侵蚀、公地悲剧 | [experts/system-archetypes.md](experts/system-archetypes.md) |
 | **22. 精益实验与刻意练习** | 新品MVP验证、探索与利用分配、专家心理表征 | 多臂老虎机探索-利用权衡 (UCB)、精益创业构建-测量-学习飞轮、费曼学习法、艾利克森刻意练习与心理表征 | [experts/lean-experimentation.md](experts/lean-experimentation.md) |
 | **23. 叙事动力学与峰终美学** | 品牌故事、爆款脚本、高潮体验设计、悬念留存 | 坎贝尔英雄之旅与智者导师定位、亚里士多德三幕剧与卡塔西斯净化、蔡加尼克悬念效应、卡尼曼峰终定律 | [experts/narrative-aesthetics.md](experts/narrative-aesthetics.md) |
 | **24. 范畴同构与战略不变量** | 跨学科降维迁移、十年战略底座、元系统奇异环自举 | 范畴论函子同构映射、诺特定理与贝索斯十年战略不变量、韦斯特规模法则幂律、冯·诺依曼自复制奇异环 | [experts/category-isomorphism.md](experts/category-isomorphism.md) |
+| **25. 东方古典兵学与阳明心学** | 非对称势能布局、去强梁自嗨、心物知行合一 | 《孙子兵法》先胜而后求战/致人而不致于人/避实击虚/奇正相生、老子反者道之动、王阳明知行合一与事上磨练 | [experts/eastern-strategy-philosophy.md](experts/eastern-strategy-philosophy.md) |
+| **26. 量子认识论与叠加态决策** | 防调研问卷失真、波粒双模态表达、多假说并行探索 | 海森堡测不准与观察者效应、玻尔波粒二象互补原理、薛定谔战略叠加态与延迟坍缩、费曼路径积分相长干涉 | [experts/quantum-epistemology.md](experts/quantum-epistemology.md) |
+| **27. 制度经济学与康威拓扑** | 平台交易摩擦归零、路径依赖解锁、组织架构解耦 | 科斯定理与交易成本边界、诺斯制度路径依赖破解、奥斯特罗姆自主治理8原则、康威定律与逆康威操作 | [experts/institutional-governance.md](experts/institutional-governance.md) |
+| **28. 流行病模因与心理免疫** | 病毒级裂变传播、社交货币打造、防黑公关疫苗 | 流行病学 $R_0 = \beta c d$ 裂变公式、道金斯模因论三定律、麦圭尔心理免疫接种理论、森托拉复杂传染宽桥定律 | [experts/epidemiology-memetics.md](experts/epidemiology-memetics.md) |
+| **29. 认知工效学与极简美学** | 转化漏斗提效、单一行动号召、高潮留白共振 | 希克-海曼决策熵定律、菲茨可达性定律、迪特·拉姆斯极简十诫 (Less, But Better)、罗维MAYA原理与留白负熵律 | [experts/design-aesthetics-physics.md](experts/design-aesthetics-physics.md) |
+| **30. 科学革命与从0到1创造** | 颠覆性新范式开创、核心公理守护、反共识破局 | 托马斯·库恩范式转移与不可通约性、拉卡托斯硬核与保护带纲领、熊彼特创造性破坏、彼得·蒂尔从0到1反共识秘密 | [experts/paradigm-revolutions.md](experts/paradigm-revolutions.md) |
 
 ---
 
@@ -118,11 +124,13 @@ $$\Delta \text{Skill} \ge 0 \quad (\forall i \in \text{Core Dimensions}: \Delta 
 * **帕累托仲裁器**：[core/pareto-arbiter.md](core/pareto-arbiter.md)
 * **红队对抗规程**：[core/red-team.md](core/red-team.md)
 * **自指自举进化协议**：[core/bootstrapping.md](core/bootstrapping.md)
+* **全链路认知编译器**：[scripts/oracle_compiler.py](scripts/oracle_compiler.py)
 * **可执行门控路由调度器**：[scripts/oracle_router.py](scripts/oracle_router.py)
 * **自动化量化评估引擎**：[scripts/oracle_eval.py](scripts/oracle_eval.py)
+* **可执行三维红队对抗引擎**：[scripts/oracle_redteam.py](scripts/oracle_redteam.py)
 * **公理变异与重构引擎**：[scripts/oracle_mutate.py](scripts/oracle_mutate.py)
 * **递归多代自指进化引擎**：[scripts/oracle_loop.py](scripts/oracle_loop.py)
 * **CI/CD 全自动化回归质检**：[scripts/run_oracle_audit.sh](scripts/run_oracle_audit.sh)
 * **自动化公理单元测试套件**：[tests/test_oracle_engine.py](tests/test_oracle_engine.py)
-* **人类前 120 伟大思维模型与终极理论全景索引**：[references/top-100-mental-models.md](references/top-100-mental-models.md)
+* **人类前 150 伟大思维模型与终极理论全景索引**：[references/top-100-mental-models.md](references/top-100-mental-models.md)
 * **商业文案官方黄金通关标杆**：[benchmarks/case-human-article.md](benchmarks/case-human-article.md)（深度拆解人类历史上从 AI 公文腔到 3 分钟顶流宣传片的跨学科推导全过程）

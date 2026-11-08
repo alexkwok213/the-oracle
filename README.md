@@ -32,7 +32,7 @@
 flowchart TD
     User[用户输入: 任何需要优化的技能 / 复杂任务 / 初稿] --> Router[门控路由器 Router: 核心矛盾特征解构]
     
-    subgraph 底层公理专家池 Expert Axiom Pool (24 Grand Domains / 120 Models)
+    subgraph 底层公理专家池 Expert Axiom Pool (30 Grand Domains / 150 Models)
         E1[博弈论与演化专家: 昂贵信号 / 纳什均衡 / 梳毛假说]
         E2[物理与信息论专家: 香农熵减 / 高信噪比 / 复杂度守恒]
         E3[认知与神经科学专家: PKM模型 / 双重编码 / 递质回路]
@@ -57,16 +57,22 @@ flowchart TD
         E22[精益实验与刻意练习专家: 多臂老虎机UCB / MVP飞轮 / 费曼测试 / 心理表征]
         E23[叙事动力学与峰终美学专家: 坎贝尔英雄之旅 / 三幕剧净化 / 蔡加尼克悬念 / 峰终定律]
         E24[范畴同构与战略不变量专家: 范畴论函子映射 / 诺特十年不变量 / 韦斯特规模幂律 / 奇异环]
+        E25[东方古典兵学与阳明心学专家: 先胜求战 / 避实击虚 / 奇正相生 / 反者道之动 / 知行合一]
+        E26[量子认识论与叠加态决策专家: 海森堡观察者效应 / 波粒二象性 / 战略叠加态 / 路径积分]
+        E27[制度经济学与康威拓扑专家: 科斯交易成本 / 诺斯路径依赖 / 奥斯特罗姆公地治理 / 康威定律]
+        E28[流行病模因与心理免疫专家: R0裂变公式 / 道金斯模因论 / 麦圭尔心理疫苗 / 复杂传染宽桥]
+        E29[认知工效学与极简美学专家: 希克定律 / 菲茨定律 / 拉姆斯极简十诫 / MAYA原理与留白负熵]
+        E30[科学革命与从0到1创造专家: 库恩范式转移 / 拉卡托斯硬核保护带 / 熊彼特创造性破坏 / 蒂尔秘密]
     end
     
-    Router -->|动态加权路由| E1 & E2 & E3 & E4 & E5 & E6 & E7 & E8 & E9 & E10 & E11 & E12 & E13 & E14 & E15 & E16 & E17 & E18 & E19 & E20 & E21 & E22 & E23 & E24
+    Router -->|动态加权路由| E1 & E2 & E3 & E4 & E5 & E6 & E7 & E8 & E9 & E10 & E11 & E12 & E13 & E14 & E15 & E16 & E17 & E18 & E19 & E20 & E21 & E22 & E23 & E24 & E25 & E26 & E27 & E28 & E29 & E30
     
-    E1 & E2 & E3 & E4 & E5 & E6 & E7 & E8 & E9 & E10 & E11 & E12 & E13 & E14 & E15 & E16 & E17 & E18 & E19 & E20 & E21 & E22 & E23 & E24 --> Synthesizer[第一性原理熔铸与解法重构]
+    E1 & E2 & E3 & E4 & E5 & E6 & E7 & E8 & E9 & E10 & E11 & E12 & E13 & E14 & E15 & E16 & E17 & E18 & E19 & E20 & E21 & E22 & E23 & E24 & E25 & E26 & E27 & E28 & E29 & E30 --> Synthesizer[第一性原理熔铸与解法重构]
     
     subgraph 质检与自举演化引擎
-        Synthesizer --> Pareto[帕累托天平: 零负优化与过度修正仲裁]
-        Pareto --> RedTeam[三维红队对抗审查: 极客挑刺+边界破坏]
-        RedTeam --> Bootstrapping[递归自指演化引擎: 多代变异迭代至不动点]
+        Synthesizer --> Pareto[帕累托天平: 零负优化与反古德哈特作弊仲裁]
+        Pareto --> RedTeam[可执行三维红队对抗审查: 怀疑者+法务猎人+反白开水审美官]
+        RedTeam --> Bootstrapping[递归自指演化引擎: TOC逐代瓶颈击穿至不动点]
     end
     
     Bootstrapping --> Output[输出: 跨学科第一性原理驱动的免检级终极技能]
@@ -74,9 +80,9 @@ flowchart TD
 
 ---
 
-## 🧠 先知专家池核心公理 (The 24 Grand Expert Domains & Top 120 Mental Models)
+## 🧠 先知专家池核心公理 (The 30 Grand Expert Domains & Top 150 Mental Models)
 
-本体系汲取**查理·芒格多元思维模型格栅 (Latticework of Mental Models)** 与人类前 120 伟大科学理论精髓，构建了 24 大不可动摇的公理专家池：
+本体系汲取**查理·芒格多元思维模型格栅 (Latticework of Mental Models)** 与人类前 150 伟大科学理论精髓，构建了 30 大不可动摇的公理专家池：
 
 | 专家模块 | 第一性原理 | 核心公理推导 | 解决的问题 |
 |---|---|---|---|
@@ -104,6 +110,12 @@ flowchart TD
 | [`experts/lean-experimentation.md`](experts/lean-experimentation.md) | **精益实验与刻意练习** (Lean & Deliberate Practice) | 多臂老虎机探索-利用权衡 (UCB)；精益创业构建-测量-学习飞轮；费曼学习法去术语测试；艾利克森刻意练习与心理表征 | 闭门造车盲目投入、术语伪装不懂装懂、机械重复无长进 |
 | [`experts/narrative-aesthetics.md`](experts/narrative-aesthetics.md) | **叙事动力学与峰终美学** (Narrative & Peak-End) | 坎贝尔英雄之旅与智者导师定位；亚里士多德三幕剧与卡塔西斯净化；蔡加尼克悬念闭合律；卡尼曼峰终定律 | 品牌自嗨抢当主角、平铺直叙无悬念、结尾平庸无记忆点 |
 | [`experts/category-isomorphism.md`](experts/category-isomorphism.md) | **范畴同构与战略不变量** (Category Isomorphism & Invariants) | 范畴论函子同构映射；诺特定理与贝索斯十年战略不变量；韦斯特规模法则幂律；冯·诺依曼自复制奇异环 | 跨学科壁垒割裂、追逐短期风口、组织规模膨胀死于官僚热寂 |
+| [`experts/eastern-strategy-philosophy.md`](experts/eastern-strategy-philosophy.md) | **东方古典兵学与阳明心学** (Eastern Strategy & Yangming) | 《孙子兵法》先胜而后求战/致人而不致于人/避实击虚/奇正相生；老子反者道之动；王阳明知行合一与事上磨练 | 陷入同质化正面肉搏、自夸强梁惹人反感、知而不行假把式 |
+| [`experts/quantum-epistemology.md`](experts/quantum-epistemology.md) | **量子认识论与叠加态决策** (Quantum Epistemology) | 海森堡测不准与观察者效应；玻尔波粒二象互补原理；薛定谔战略叠加态与延迟坍缩；费曼路径积分相长干涉 | 传统调研问卷被印象管理欺骗、过早赌死单一路径、表达缺乏波粒双模态张力 |
+| [`experts/institutional-governance.md`](experts/institutional-governance.md) | **制度经济学与康威拓扑** (Institutional Economics & Conway) | 科斯定理与交易成本边界；诺斯制度路径依赖破解；奥斯特罗姆自主治理8原则；康威定律与逆康威操作 | 平台未能替个体抹平交易摩擦、被历史路径依赖锁死、部门墙导致架构臃肿 |
+| [`experts/epidemiology-memetics.md`](experts/epidemiology-memetics.md) | **流行病模因与心理免疫** (Epidemiology & Inoculation) | 流行病学 $R_0 = \beta c d$ 裂变公式；道金斯模因论三定律；麦圭尔心理免疫接种理论；森托拉复杂传染宽桥定律 | 传播链无法自发裂变、一句话记不住传不开、遇外部一句质疑就信任崩盘 |
+| [`experts/design-aesthetics-physics.md`](experts/design-aesthetics-physics.md) | **认知工效学与极简美学** (Interaction Physics & Aesthetics) | 希克-海曼决策熵定律（单一CTA）；菲茨可达性定律；迪特·拉姆斯极简十诫；罗维MAYA原理与留白负熵律 | 选项过多导致用户决策瘫痪、转化路径繁琐、装饰冗余淹没核心金句 |
+| [`experts/paradigm-revolutions.md`](experts/paradigm-revolutions.md) | **科学革命与从0到1创造** (Paradigm Revolutions & 0-to-1) | 托马斯·库恩范式转移与不可通约性；拉卡托斯硬核与保护带纲领；熊彼特创造性破坏；彼得·蒂尔从0到1反共识秘密 | 在旧范式里造更圆的马车轮子、妥协丧失核心公理硬核、水平模仿无反共识秘密 |
 
 ---
 
@@ -123,11 +135,11 @@ the-oracle/
 ├── SKILL.md                      # 核心元技能定义规范（Agent 原生支持，自评 100.0/100）
 ├── README.md                     # 项目哲学全景与架构说明
 ├── core/                         # 核心控制中枢
-│   ├── router.md                 # 门控路由引擎协议 (24 Grand Domains)
-│   ├── pareto-arbiter.md         # 帕累托改进仲裁器
+│   ├── router.md                 # 门控路由引擎协议 (30 Grand Domains)
+│   ├── pareto-arbiter.md         # 帕累托改进仲裁器 (含反古德哈特作弊防线)
 │   ├── red-team.md               # 三维红队对抗攻击协议
-│   └── bootstrapping.md          # 递归自指自举进化协议
-├── experts/                      # 先知公理专家池 (The 24 Grand Domains)
+│   └── bootstrapping.md          # 递归自指自举进化协议 (v1.0 -> v3.0 完整演化台账)
+├── experts/                      # 先知公理专家池 (The 30 Grand Domains)
 │   ├── game-theory.md            # 01. 博弈论与昂贵信号专家
 │   ├── information-physics.md    # 02. 物理与信息控制论专家
 │   ├── cognitive-neuro.md        # 03. 认知神经科学专家
@@ -151,17 +163,25 @@ the-oracle/
 │   ├── system-archetypes.md      # 21. 系统基模与梅多斯干预杠杆点专家
 │   ├── lean-experimentation.md   # 22. 精益实验、多臂老虎机与刻意练习专家
 │   ├── narrative-aesthetics.md   # 23. 叙事动力学、英雄之旅与峰终美学专家
-│   └── category-isomorphism.md   # 24. 范畴同构、规模法则与战略不变量专家
+│   ├── category-isomorphism.md   # 24. 范畴同构、规模法则与战略不变量专家
+│   ├── eastern-strategy-philosophy.md # 25. 东方古典兵学、道家演化与阳明心学专家
+│   ├── quantum-epistemology.md   # 26. 量子认识论、观察者效应与叠加态决策专家
+│   ├── institutional-governance.md # 27. 制度经济学、交易成本与康威拓扑专家
+│   ├── epidemiology-memetics.md  # 28. 流行病学、模因裂变与心理免疫接种专家
+│   ├── design-aesthetics-physics.md # 29. 认知工效学、交互物理学与极简美学专家
+│   └── paradigm-revolutions.md   # 30. 科学革命、范式转移与从0到1创造专家
 ├── scripts/                      # 自动化确定性工程工具链 (Zero Dependencies)
-│   ├── oracle_router.py          # 可执行门控路由调度引擎 (24 Experts / 120 Models)
-│   ├── oracle_eval.py            # 跨领域公理量化评估与帕累托仲裁器 (Copy/Code/Strategy/Skill/Reasoning)
+│   ├── oracle_compiler.py        # 全链路认知编译器 & 哥德尔全仓自指审计器 (--self-audit-repo)
+│   ├── oracle_router.py          # 可执行门控路由调度引擎 (30 Experts / 150 Models)
+│   ├── oracle_eval.py            # 跨领域公理量化评估与反古德哈特帕累托仲裁器 (5 Domains)
+│   ├── oracle_redteam.py         # 可执行三维红队对抗审讯引擎 (怀疑者/法务极客/反白开水审美官)
 │   ├── oracle_mutate.py          # 公理级靶向瓶颈变异与重构算子执行引擎
 │   ├── oracle_loop.py            # 递归多代自指进化收敛引擎 (TOC 逐代瓶颈击穿 + 不动点收敛)
-│   └── run_oracle_audit.sh       # 6 阶段 CI/CD 自动化回归质检流水线
+│   └── run_oracle_audit.sh       # 7 阶段 CI/CD 自动化回归质检流水线
 ├── tests/                        # 单元测试套件
-│   └── test_oracle_engine.py     # 13 大跨学科公理与递归进化单元测试 (100% 通过)
+│   └── test_oracle_engine.py     # 16 大跨学科公理、反作弊、红队与递归进化单元测试 (100% 通过)
 ├── references/                   # 权威经典参考指南
-│   └── top-100-mental-models.md  # 人类前 120 伟大思维模型与理论全景索引 (12 章全覆盖)
+│   └── top-100-mental-models.md  # 人类前 150 伟大思维模型与理论全景索引 (15 章全覆盖)
 └── benchmarks/                   # 黄金通关标杆案例
     └── case-human-article.md     # 商业文案心智重构实战全景
 ```
@@ -170,25 +190,25 @@ the-oracle/
 
 ## 🛠 自动化量化工程工具链使用指引 (CLI Toolkit)
 
-The Oracle 自带轻量级、零外部依赖的自动化工程套件，支持门控路由诊断、单文本评估、优化前后帕累托裁决、公理靶向变异重构与递归多代自指进化：
+The Oracle v3.0 自带轻量级、零外部依赖的自动化工程套件，支持全链路认知编译、门控路由诊断、单文本评估、三维红队审讯、优化前后帕累托裁决与递归多代自指进化：
 
 ```bash
-# 0. 可执行门控路由诊断 (自动匹配 24 大先知领域与 120 大思维模型)
+# 0. 一键运行 5 阶段全链路认知编译器 (路由 -> 评估 -> 红队 -> 多代进化 -> 终局裁决)
+python3 scripts/oracle_compiler.py dirty_input.txt -o compiled_output.txt
+
+# 1. 运行哥德尔全仓自指健康度审计证书 (校验 30 专家 / 150 模型 / 100分自评 / 红队通关)
+python3 scripts/oracle_compiler.py --self-audit-repo
+
+# 2. 可执行门控路由诊断 (自动匹配 30 大先知领域与 150 大思维模型)
 python3 scripts/oracle_router.py "你的任务描述或文件路径"
 
-# 1. 跨领域公理评估 (支持 copy / code / strategy / skill / reasoning 五大领域)
-python3 scripts/oracle_eval.py "待评估文本或文件路径"
+# 3. 可执行三维红队对抗审讯 (三大恶魔代言人逐句挑刺)
+python3 scripts/oracle_redteam.py "待审讯文本或文件路径"
 
-# 2. 仲裁优化前后的帕累托改进 (是否属于零负优化的绝对跃迁)
+# 4. 跨领域公理评估与帕累托仲裁 (支持 copy / code / strategy / skill / reasoning 五大领域)
 python3 scripts/oracle_eval.py --before draft_before.txt --after draft_after.txt
 
-# 3. 执行公理级变异重构 (支持 --bottleneck 靶向击穿单一约束瓶颈)
-python3 scripts/oracle_mutate.py dirty_input.txt -o clean_output.txt
-
-# 4. 运行递归多代自指进化循环 (按 TOC 约束理论逐代击穿瓶颈直至帕累托不动点收敛)
-python3 scripts/oracle_loop.py target.txt --max-iter 6 -o evolved.txt
-
-# 5. 执行 6 阶段完整自动化回归与质检流水线
+# 5. 执行 7 阶段完整自动化回归与质检流水线
 ./scripts/run_oracle_audit.sh
 ```
 
