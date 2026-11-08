@@ -118,4 +118,5 @@ $$\Delta \text{Skill} \ge 0 \quad (\forall i \in \text{Core Dimensions}: \Delta 
 * **递归多代自指进化引擎**：[scripts/oracle_loop.py](scripts/oracle_loop.py)
 * **CI/CD 全自动化回归质检**：[scripts/run_oracle_audit.sh](scripts/run_oracle_audit.sh)
 * **自动化公理单元测试套件**：[tests/test_oracle_engine.py](tests/test_oracle_engine.py)
+* **人类前 100 伟大思维模型与终极理论全景索引**：[references/top-100-mental-models.md](references/top-100-mental-models.md)
 * **商业文案官方黄金通关标杆**：[benchmarks/case-human-article.md](benchmarks/case-human-article.md)（深度拆解人类历史上从 AI 公文腔到 3 分钟顶流宣传片的跨学科推导全过程）

@@ -147,16 +147,8 @@ the-oracle/
 │   └── run_oracle_audit.sh       # 5 阶段 CI/CD 自动化回归质检流水线
 ├── tests/                        # 单元测试套件
 │   └── test_oracle_engine.py     # 9 大跨学科公理单元测试 (100% 通过)
-└── benchmarks/                   # 黄金通关标杆案例
-    └── case-human-article.md     # 商业文案心智重构实战全景
-```
-├── scripts/                      # 自动化确定性工程工具链 (Zero Dependencies)
-│   ├── oracle_eval.py            # 跨领域公理量化评估与帕累托仲裁器 (Copy/Code/Strategy/Skill)
-│   ├── oracle_mutate.py          # 公理级变异与重构算子执行引擎
-│   ├── oracle_loop.py            # 递归多代自指进化收敛引擎 (TOC 瓶颈诊断 + 不动点收敛)
-│   └── run_oracle_audit.sh       # 5 阶段 CI/CD 自动化回归质检流水线
-├── tests/                        # 单元测试套件
-│   └── test_oracle_engine.py     # 9 大跨学科公理单元测试 (100% 通过)
+├── references/                   # 权威经典参考指南
+│   └── top-100-mental-models.md  # 人类前 100 伟大思维模型与理论全景索引
 └── benchmarks/                   # 黄金通关标杆案例
     └── case-human-article.md     # 商业文案心智重构实战全景
 ```
