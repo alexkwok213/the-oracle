@@ -134,3 +134,4 @@ $$\Delta \text{Skill} \ge 0 \quad (\forall i \in \text{Core Dimensions}: \Delta 
 * **自动化公理单元测试套件**：[tests/test_oracle_engine.py](tests/test_oracle_engine.py)
 * **人类前 150 伟大思维模型与终极理论全景索引**：[references/top-100-mental-models.md](references/top-100-mental-models.md)
 * **商业文案官方黄金通关标杆**：[benchmarks/case-human-article.md](benchmarks/case-human-article.md)（深度拆解人类历史上从 AI 公文腔到 3 分钟顶流宣传片的跨学科推导全过程）
+* **Agent技能架构元进化标杆**：[benchmarks/case-agent-skill-evolution.md](benchmarks/case-agent-skill-evolution.md)（从含糊愿望草稿到 100 分满分规范的 TOC 逐代瓶颈击穿全实录）

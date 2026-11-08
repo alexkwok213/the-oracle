@@ -183,7 +183,8 @@ the-oracle/
 ├── references/                   # 权威经典参考指南
 │   └── top-100-mental-models.md  # 人类前 150 伟大思维模型与理论全景索引 (15 章全覆盖)
 └── benchmarks/                   # 黄金通关标杆案例
-    └── case-human-article.md     # 商业文案心智重构实战全景
+    ├── case-human-article.md     # 商业文案心智重构实战全景
+    └── case-agent-skill-evolution.md # Agent 技能架构元进化实战全景 (TOC 逐代瓶颈击穿)
 ```
 
 ---
